@@ -1,0 +1,82 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="100" y1="40" x2="1090" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAFCFF"/>
+      <stop offset="1" stop-color="#EEF5FD"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F6FAFE"/>
+    </linearGradient>
+    <filter id="shadow" x="18" y="18" width="1164" height="724" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#173A72" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="760" rx="34" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="34" y="34" width="1132" height="692" rx="30" fill="white" fill-opacity="0.86"/>
+  </g>
+
+  <text x="76" y="152" fill="#173A72" font-size="58" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">真正能进客舱的</text>
+  <text x="76" y="216" fill="#173A72" font-size="58" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">是一整套提前申请与核验</text>
+  <text x="78" y="268" fill="#617B99" font-size="24" font-family="PingFang SC, Microsoft YaHei, sans-serif">服务犬不是临场解释型服务，而是一条独立的客舱规则通道。</text>
+
+  <g>
+    <rect x="866" y="96" width="240" height="228" rx="28" fill="#F7FBFF" stroke="#DCE9F7" stroke-width="2"/>
+    <rect x="914" y="132" width="144" height="120" rx="28" fill="#EAF2FC"/>
+    <rect x="942" y="164" width="88" height="66" rx="18" fill="#284F92"/>
+    <circle cx="966" cy="197" r="10" fill="#A7D0F0"/>
+    <circle cx="993" cy="197" r="10" fill="#A7D0F0"/>
+    <path d="M1022 197H1040" stroke="#A7D0F0" stroke-width="8" stroke-linecap="round"/>
+    <path d="M938 260C956 244 977 236 999 236C1022 236 1044 244 1060 260" stroke="#8BB9E0" stroke-width="8" stroke-linecap="round"/>
+    <text x="920" y="292" fill="#617B99" font-size="17" font-family="PingFang SC, Microsoft YaHei, sans-serif">符合定义之后</text>
+    <text x="920" y="318" fill="#173A72" font-size="22" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">才开始谈客舱运输</text>
+  </g>
+
+  <line x1="182" y1="360" x2="1020" y2="360" stroke="#CFDFF0" stroke-width="3"/>
+  <circle cx="182" cy="360" r="12" fill="#1F4A8D"/>
+  <circle cx="462" cy="360" r="12" fill="#1F4A8D"/>
+  <circle cx="742" cy="360" r="12" fill="#1F4A8D"/>
+  <circle cx="1020" cy="360" r="12" fill="#1F4A8D"/>
+
+  <g>
+    <rect x="76" y="404" width="250" height="244" rx="26" fill="url(#card)" stroke="#D8E6F4" stroke-width="2"/>
+    <circle cx="130" cy="458" r="36" fill="#294F92"/>
+    <text x="98" y="470" fill="white" font-size="28" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">48h</text>
+    <text x="76" y="550" fill="#173A72" font-size="30" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">第一步 提前申请</text>
+    <text x="76" y="588" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">最迟在起飞前 48 小时</text>
+    <text x="76" y="614" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">提出服务申请，</text>
+    <text x="76" y="640" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">不是当天临时解释。</text>
+  </g>
+
+  <g>
+    <rect x="350" y="404" width="250" height="244" rx="26" fill="url(#card)" stroke="#D8E6F4" stroke-width="2"/>
+    <rect x="398" y="432" width="92" height="92" rx="26" fill="#EAF2FC"/>
+    <path d="M420 478L438 496L466 452L490 468" stroke="#5AAAD6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="350" y="550" fill="#173A72" font-size="30" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">第二步 备齐材料</text>
+    <text x="350" y="588" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">检疫证书、疫苗证书、</text>
+    <text x="350" y="614" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">训练证明，逐项核对。</text>
+  </g>
+
+  <g>
+    <rect x="624" y="404" width="250" height="244" rx="26" fill="url(#card)" stroke="#D8E6F4" stroke-width="2"/>
+    <circle cx="678" cy="458" r="36" fill="#17786B"/>
+    <text x="646" y="470" fill="white" font-size="24" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">120m</text>
+    <text x="624" y="550" fill="#173A72" font-size="30" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">第三步 提前值机</text>
+    <text x="624" y="588" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">手续办妥后，仍应按要求</text>
+    <text x="624" y="614" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">提前到柜台现场办理。</text>
+  </g>
+
+  <g>
+    <rect x="898" y="404" width="250" height="244" rx="26" fill="url(#card)" stroke="#D8E6F4" stroke-width="2"/>
+    <rect x="946" y="432" width="92" height="92" rx="26" fill="#FFF4E8"/>
+    <path d="M970 478H1012" stroke="#D38D32" stroke-width="8" stroke-linecap="round"/>
+    <path d="M992 456L1018 478L992 500" stroke="#D38D32" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="898" y="550" fill="#173A72" font-size="30" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">第四步 机上规范</text>
+    <text x="898" y="588" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">工作衫、牵引索、不侵占</text>
+    <text x="898" y="614" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">他人空间，规则要全程成立。</text>
+  </g>
+
+  <text x="76" y="706" fill="#7E93AA" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">图示重点：服务犬客舱运输是一条独立流程，不是普通宠物因为“很乖”就能直接套用的规则。</text>
+</svg>

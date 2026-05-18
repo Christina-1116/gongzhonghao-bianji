@@ -1,0 +1,70 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="100" y1="40" x2="1090" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAFCFF"/>
+      <stop offset="1" stop-color="#EEF5FD"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F6FAFE"/>
+    </linearGradient>
+    <filter id="shadow" x="18" y="18" width="1164" height="724" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#173A72" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="760" rx="34" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="34" y="34" width="1132" height="692" rx="30" fill="white" fill-opacity="0.86"/>
+  </g>
+
+  <text x="76" y="152" fill="#173A72" font-size="58" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">真正值得提前做的</text>
+  <text x="76" y="216" fill="#173A72" font-size="58" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">不是狂刷攻略，而是核对清单</text>
+  <text x="78" y="268" fill="#617B99" font-size="24" font-family="PingFang SC, Microsoft YaHei, sans-serif">结尾最值得收藏的，不是更长的结论，而是一眼就能照着做的步骤。</text>
+
+  <g>
+    <rect x="892" y="96" width="214" height="214" rx="28" fill="#F7FBFF" stroke="#DCE9F7" stroke-width="2"/>
+    <rect x="930" y="132" width="138" height="92" rx="24" fill="#EAF2FC"/>
+    <path d="M964 174L986 196L1036 146" stroke="#284F92" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="936" y="268" fill="#617B99" font-size="17" font-family="PingFang SC, Microsoft YaHei, sans-serif">收藏感来自可执行</text>
+    <text x="936" y="296" fill="#173A72" font-size="22" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">读完最好能立刻照着做</text>
+  </g>
+
+  <g>
+    <rect x="76" y="340" width="486" height="150" rx="24" fill="url(#card)" stroke="#D8E6F4" stroke-width="2"/>
+    <circle cx="130" cy="414" r="34" fill="#294F92"/>
+    <text x="117" y="425" fill="white" font-size="28" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">1</text>
+    <text x="184" y="396" fill="#173A72" font-size="30" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">先看宠物本身</text>
+    <text x="184" y="432" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">健康状态、年龄、短鼻类、怀孕或哺乳期，</text>
+    <text x="184" y="458" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">先排除不能运的前提。</text>
+  </g>
+
+  <g>
+    <rect x="638" y="340" width="486" height="150" rx="24" fill="url(#card)" stroke="#D8E6F4" stroke-width="2"/>
+    <circle cx="692" cy="414" r="34" fill="#58A9D6"/>
+    <text x="679" y="425" fill="white" font-size="28" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">2</text>
+    <text x="746" y="396" fill="#173A72" font-size="30" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">先分规则身份</text>
+    <text x="746" y="432" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">普通宠物、服务犬、精神抚慰犬，</text>
+    <text x="746" y="458" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">不要混着理解，更不要混着准备。</text>
+  </g>
+
+  <g>
+    <rect x="76" y="520" width="486" height="150" rx="24" fill="url(#card)" stroke="#D8E6F4" stroke-width="2"/>
+    <circle cx="130" cy="594" r="34" fill="#17786B"/>
+    <text x="117" y="605" fill="white" font-size="28" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">3</text>
+    <text x="184" y="576" fill="#173A72" font-size="30" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">先问航班能不能承运</text>
+    <text x="184" y="612" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">不是所有航线、所有机型、联程方案，</text>
+    <text x="184" y="638" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">都适用同一条规则。</text>
+  </g>
+
+  <g>
+    <rect x="638" y="520" width="486" height="150" rx="24" fill="url(#card)" stroke="#D8E6F4" stroke-width="2"/>
+    <circle cx="692" cy="594" r="34" fill="#F0B65D"/>
+    <text x="679" y="605" fill="white" font-size="28" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">4</text>
+    <text x="746" y="576" fill="#173A72" font-size="30" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">国际航线再多核对一步</text>
+    <text x="746" y="612" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">目的地和过境地检疫要求，</text>
+    <text x="746" y="638" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">也会直接影响能不能顺利出发。</text>
+  </g>
+
+  <text x="76" y="706" fill="#7E93AA" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">图示重点：真正适合收藏的结尾，不是信息更长，而是读者一眼就知道出发前该做什么。</text>
+</svg>

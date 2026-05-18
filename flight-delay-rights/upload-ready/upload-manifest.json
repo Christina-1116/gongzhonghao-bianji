@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-05-19T02:35:21",
+  "source_package_dir": "/Users/huajingdong/Documents/Codex/2026-05-16/git-clone-https-github-com-clockless/公众号编辑/flight-delay-rights",
+  "slug": "flight-delay-rights",
+  "title": "飞机延误时，你真正有的6项权益，一篇讲清",
+  "digest": "航班延误后，很多人最先问的是“能赔多少”。但真正更值得先弄清楚的，是信息通知、退改签、食宿安排、延误证明和机上延误保障。这篇按照民航局公开规则，把旅客最常用、也最容易误解的权益一次讲清楚。",
+  "cover_mode": "inline first-image cover",
+  "body_html_file": "wechat-publish.html",
+  "cover": {
+    "bundle_path": "assets/cover.png",
+    "source_path": "assets/cover.png",
+    "show_cover_pic": 1,
+    "is_first_inline_image": true
+  },
+  "images": [
+    {
+      "order": 0,
+      "role": "cover",
+      "source_html_src": "./assets/cover.png",
+      "bundle_path": "assets/cover.png",
+      "source_path": "assets/cover.png",
+      "alt": "飞机延误时的旅客权益封面图",
+      "is_first_inline_image": true,
+      "is_inline_cover": true
+    },
+    {
+      "order": 1,
+      "role": "body",
+      "source_html_src": "./assets/figure-1-rights-overview.png",
+      "bundle_path": "assets/figure-1-rights-overview.png",
+      "source_path": "assets/figure-1-rights-overview.png",
+      "alt": "航班延误后旅客最常用的6项核心权益总览图",
+      "is_first_inline_image": false,
+      "is_inline_cover": false
+    },
+    {
+      "order": 2,
+      "role": "body",
+      "source_html_src": "./assets/figure-2-meals-hotel.png",
+      "bundle_path": "assets/figure-2-meals-hotel.png",
+      "source_path": "assets/figure-2-meals-hotel.png",
+      "alt": "航班延误时餐食和住宿边界对比图",
+      "is_first_inline_image": false,
+      "is_inline_cover": false
+    },
+    {
+      "order": 3,
+      "role": "body",
+      "source_html_src": "./assets/figure-3-onboard-delay.png",
+      "bundle_path": "assets/figure-3-onboard-delay.png",
+      "source_path": "assets/figure-3-onboard-delay.png",
+      "alt": "机上延误时的关键时间节点图",
+      "is_first_inline_image": false,
+      "is_inline_cover": false
+    },
+    {
+      "order": 4,
+      "role": "body",
+      "source_html_src": "./assets/closing-checklist.png",
+      "bundle_path": "assets/closing-checklist.png",
+      "source_path": "assets/closing-checklist.png",
+      "alt": "航班延误后最实用的处理顺序收藏海报",
+      "is_first_inline_image": false,
+      "is_inline_cover": false
+    }
+  ],
+  "body_image_count": 4,
+  "checks": {
+    "title_present": true,
+    "summary_present": true,
+    "local_image_count": 5,
+    "cover_is_first_inline_image": true,
+    "publish_html_file_exists": true
+  },
+  "next_step_inputs": {
+    "title": "飞机延误时，你真正有的6项权益，一篇讲清",
+    "digest": "航班延误后，很多人最先问的是“能赔多少”。但真正更值得先弄清楚的，是信息通知、退改签、食宿安排、延误证明和机上延误保障。这篇按照民航局公开规则，把旅客最常用、也最容易误解的权益一次讲清楚。",
+    "content_html_file": "wechat-publish.html",
+    "thumb_image_file": "assets/cover.png",
+    "image_bundle_paths": [
+      "assets/cover.png",
+      "assets/figure-1-rights-overview.png",
+      "assets/figure-2-meals-hotel.png",
+      "assets/figure-3-onboard-delay.png",
+      "assets/closing-checklist.png"
+    ]
+  }
+}

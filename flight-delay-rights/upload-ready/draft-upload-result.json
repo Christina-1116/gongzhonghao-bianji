@@ -1,0 +1,60 @@
+{
+  "source_upload_ready_dir": "/Users/huajingdong/Documents/Codex/2026-05-16/git-clone-https-github-com-clockless/公众号编辑/flight-delay-rights/upload-ready",
+  "title": "飞机延误时，你真正有的6项权益，一篇讲清",
+  "digest": "航班延误后，很多人最先问的是“能赔多少”。但真正更值得先弄清楚的，是信息通知、退改签、食宿安排、延误证明和机上延误保障。这篇按照民航局公开规则，把旅客最常用、也最容易误解的权益一次讲清楚。",
+  "thumb_media_id": "rnnTZb0YTCXfzws1nY465vdQwEV2dvJlrNedUqg7X1uR7mqkueNzN8po8D3n2Y7x",
+  "cover_upload": {
+    "media_id": "rnnTZb0YTCXfzws1nY465vdQwEV2dvJlrNedUqg7X1uR7mqkueNzN8po8D3n2Y7x",
+    "url": "http://mmbiz.qpic.cn/mmbiz_jpg/Y9C3r2PlPg2vl3iaqeIk3QUGDibYvXCGFzZkYm7BIGZ6aYTzKE8Fzb4jmmJFTCyqSPGGVibsjA2oMCLobtOmWTU1suGPmLH16BmHianc2ueJF18/0?wx_fmt=jpeg",
+    "item": []
+  },
+  "inline_image_uploads": [
+    {
+      "order": 0,
+      "role": "cover",
+      "source_html_src": "./assets/cover.png",
+      "bundle_path": "assets/cover.png",
+      "prepared_upload_file": ".wechat-upload-cache/cover.inline.jpg",
+      "remote_url": "http://mmbiz.qpic.cn/sz_mmbiz_jpg/Y9C3r2PlPg0kKZvDnGcDJHI9WZaeiaawZuicv8kwEx4lHfo61RlcvlNm56h64iaK1oLLdMuRziaHeUqc0srwX3seLkOwP9WCFibF9MYS4xoWmSfw/0?from=appmsg"
+    },
+    {
+      "order": 1,
+      "role": "body",
+      "source_html_src": "./assets/figure-1-rights-overview.png",
+      "bundle_path": "assets/figure-1-rights-overview.png",
+      "prepared_upload_file": ".wechat-upload-cache/figure-1-rights-overview.inline.jpg",
+      "remote_url": "http://mmbiz.qpic.cn/sz_mmbiz_jpg/Y9C3r2PlPg0eJmWetHHNOFwjicCQYnJgnSzUIKNzC95WZFLofRFOibwwuBrdfFCE5uFYGqp8m6NC6BcGDoJGjicKAyU8CPToNsZA0yicCRG82Yk/0?from=appmsg"
+    },
+    {
+      "order": 2,
+      "role": "body",
+      "source_html_src": "./assets/figure-2-meals-hotel.png",
+      "bundle_path": "assets/figure-2-meals-hotel.png",
+      "prepared_upload_file": ".wechat-upload-cache/figure-2-meals-hotel.inline.jpg",
+      "remote_url": "http://mmbiz.qpic.cn/mmbiz_jpg/Y9C3r2PlPg19EWQPNsLM2rqNx47icM6od2GmzQCHiclH3KNOWSI8QBUbRfdMoY2kXYAKLkJZT5A1kAWVMzBgwmmb14MNDNuAibLka33cAUX15o/0?from=appmsg"
+    },
+    {
+      "order": 3,
+      "role": "body",
+      "source_html_src": "./assets/figure-3-onboard-delay.png",
+      "bundle_path": "assets/figure-3-onboard-delay.png",
+      "prepared_upload_file": ".wechat-upload-cache/figure-3-onboard-delay.inline.jpg",
+      "remote_url": "http://mmbiz.qpic.cn/sz_mmbiz_jpg/Y9C3r2PlPg0dawA6q3rllVpicL5aLjicb6faIxH33dVesRfKrqcvf1o1ExrL8mjlGXdicM92iak8hEIEiagdgyUqSOibYRWaJEeyBmRPwIGkDSJm4/0?from=appmsg"
+    },
+    {
+      "order": 4,
+      "role": "body",
+      "source_html_src": "./assets/closing-checklist.png",
+      "bundle_path": "assets/closing-checklist.png",
+      "prepared_upload_file": ".wechat-upload-cache/closing-checklist.inline.jpg",
+      "remote_url": "http://mmbiz.qpic.cn/sz_mmbiz_jpg/Y9C3r2PlPg1reV9DfBNT2R4s7wxA1ibwSvED7xMo3LpibodV8EWQ076cSB3CFAn1M2ibO7I5MbmO9GPIRj1c6t0kDu0yVAlMD0ibKqvq4YKtbGo/0?from=appmsg"
+    }
+  ],
+  "remote_html_file": "wechat-publish.remote.html",
+  "api_fragment_file": "wechat-publish.api-fragment.html",
+  "payload_file": "draft-add-payload.json",
+  "draft_response": {
+    "media_id": "rnnTZb0YTCXfzws1nY465k9jqwLZ1SMM7Fy_5Ukkptf-ehuCxU1uerDiwDIPwc3z",
+    "item": []
+  }
+}

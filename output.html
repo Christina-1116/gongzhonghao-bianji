@@ -1,0 +1,1509 @@
+<!doctype html>
+<html lang="zh-CN" data-ha-style="document">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>带宠物坐飞机，最容易踩坑的不是手续，而是第一步就想错了</title>
+  <meta name="description" content="一篇讲清普通宠物、服务犬、精神抚慰犬在航空运输中的规则差异，以及带猫狗乘机前最该确认的四件事。">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #edf4ff;
+      --bg-deep: #dbeafe;
+      --panel: rgba(255, 255, 255, 0.88);
+      --panel-strong: #ffffff;
+      --ink: #12233d;
+      --ink-soft: #48607f;
+      --line: rgba(18, 35, 61, 0.12);
+      --line-strong: rgba(18, 35, 61, 0.2);
+      --navy: #153f82;
+      --navy-strong: #0d2d63;
+      --cyan: #58a9d6;
+      --mint: #dff4f3;
+      --warn: #fff2d8;
+      --accent: #1b69d9;
+      --accent-soft: rgba(27, 105, 217, 0.1);
+      --success: #0d7a6d;
+      --shadow: 0 24px 80px rgba(16, 43, 89, 0.12);
+      --serif: "Source Han Serif SC", "Noto Serif SC", "Songti SC", "STSong", serif;
+      --sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --mono: "SF Mono", "JetBrains Mono", "Fira Code", "Menlo", monospace;
+      --page-width: 1480px;
+      --rail-width: 320px;
+      --content-width: 1fr;
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(88, 169, 214, 0.24), transparent 28%),
+        radial-gradient(circle at 80% 18%, rgba(21, 63, 130, 0.18), transparent 22%),
+        linear-gradient(180deg, #f7fbff 0%, var(--bg) 36%, #f9fbff 100%);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font: 16px/1.75 var(--sans);
+      background: transparent;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--navy);
+      text-decoration-color: rgba(21, 63, 130, 0.35);
+      text-underline-offset: 0.18em;
+    }
+
+    button,
+    input {
+      font: inherit;
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: 0;
+      background: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .document-shell {
+      width: min(var(--page-width), calc(100vw - 32px));
+      margin: 24px auto 56px;
+      display: grid;
+      grid-template-columns: minmax(280px, var(--rail-width)) minmax(0, var(--content-width));
+      gap: 24px;
+      align-items: start;
+    }
+
+    .reader-rail,
+    .body-stage {
+      min-width: 0;
+    }
+
+    .reader-rail {
+      position: sticky;
+      top: 18px;
+    }
+
+    .rail-card,
+    .cover,
+    .body-section,
+    .source-spread,
+    .question-panel {
+      background: var(--panel);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.56);
+      box-shadow: var(--shadow);
+    }
+
+    .rail-card {
+      border-radius: var(--radius-xl);
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+
+    .rail-kicker,
+    .eyebrow,
+    .section-tag,
+    .fact-label,
+    .source-label,
+    .table-eyebrow,
+    .footer-note {
+      font: 700 11px/1.2 var(--mono);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .rail-kicker,
+    .eyebrow,
+    .source-label,
+    .footer-note {
+      color: var(--ink-soft);
+    }
+
+    .rail-title {
+      margin: 10px 0 14px;
+      font: 700 28px/1.08 var(--serif);
+      letter-spacing: -0.02em;
+    }
+
+    .rail-summary {
+      margin: 0 0 18px;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .mode-switcher {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .mode-button {
+      padding: 12px 10px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--line);
+      font-size: 13px;
+      font-weight: 700;
+      transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+    }
+
+    .mode-button:hover,
+    .mode-button:focus-visible {
+      background: #fff;
+      border-color: rgba(21, 63, 130, 0.26);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    body[data-mode="summary"] .mode-button[data-mode="summary"],
+    body[data-mode="full"] .mode-button[data-mode="full"],
+    body[data-mode="evidence"] .mode-button[data-mode="evidence"] {
+      background: var(--navy);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .search-wrap {
+      position: relative;
+      margin-bottom: 18px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 14px 14px 14px 42px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.82);
+      outline: none;
+    }
+
+    .search-wrap svg {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      transform: translateY(-50%);
+      color: var(--ink-soft);
+    }
+
+    .rail-nav {
+      display: grid;
+      gap: 8px;
+    }
+
+    .rail-link {
+      display: block;
+      padding: 12px 14px;
+      border-radius: 14px;
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: background-color 180ms ease, border-color 180ms ease;
+    }
+
+    .rail-link:hover,
+    .rail-link:focus-visible,
+    .rail-link.active {
+      background: rgba(255, 255, 255, 0.78);
+      border-color: var(--line);
+      outline: none;
+    }
+
+    .rail-link strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .rail-link span {
+      display: block;
+      margin-top: 4px;
+      color: var(--ink-soft);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .mini-verdicts {
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .mini-verdict {
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid var(--line);
+    }
+
+    .mini-verdict strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .mini-verdict p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .copy-button {
+      width: 100%;
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: var(--accent-soft);
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .copy-status {
+      margin-top: 10px;
+      min-height: 20px;
+      color: var(--ink-soft);
+      font-size: 12px;
+    }
+
+    .cover {
+      border-radius: 34px;
+      overflow: hidden;
+    }
+
+    .cover-top {
+      padding: 28px 28px 10px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.72), rgba(255,255,255,0.16)),
+        linear-gradient(120deg, rgba(88,169,214,0.22), rgba(21,63,130,0.10));
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.58);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 0 4px rgba(88, 169, 214, 0.16);
+    }
+
+    .cover-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 24px;
+      align-items: center;
+      padding: 22px 0 18px;
+    }
+
+    .cover-title {
+      margin: 12px 0 14px;
+      font: 700 clamp(36px, 4.4vw, 68px)/1.04 var(--serif);
+      letter-spacing: -0.025em;
+    }
+
+    .cover-title .emphasis {
+      color: var(--navy);
+      font-style: italic;
+    }
+
+    .deck {
+      max-width: 54ch;
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .cover-stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .stat-card {
+      padding: 16px 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(255,255,255,0.62);
+    }
+
+    .stat-number {
+      font: 700 28px/1 var(--serif);
+      color: var(--navy-strong);
+    }
+
+    .stat-text {
+      margin-top: 8px;
+      color: var(--ink-soft);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .cover-visual {
+      position: relative;
+      padding: 20px;
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.9), rgba(236,244,255,0.86));
+      border: 1px solid rgba(255,255,255,0.62);
+      box-shadow: 0 24px 60px rgba(17, 48, 95, 0.14);
+    }
+
+    .cover-visual::after {
+      content: "规则先分流，再谈同行";
+      position: absolute;
+      right: 28px;
+      bottom: 28px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(13, 45, 99, 0.92);
+      color: #fff;
+      font: 700 12px/1.2 var(--mono);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 26px rgba(13, 45, 99, 0.2);
+    }
+
+    .hero-image {
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid rgba(18, 35, 61, 0.08);
+      box-shadow: 0 12px 28px rgba(17, 48, 95, 0.12);
+    }
+
+    .cover-bottom {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 18px;
+      padding: 0 28px 28px;
+    }
+
+    .summary-strip,
+    .fact-box {
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(255,255,255,0.62);
+    }
+
+    .summary-strip strong,
+    .fact-box strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .summary-strip p,
+    .fact-box p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .body-stage {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .body-section,
+    .source-spread,
+    .question-panel {
+      border-radius: 28px;
+      padding: 28px;
+    }
+
+    .body-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .body-section::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--cyan), var(--navy));
+      opacity: 0.7;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
+      gap: 20px;
+      align-items: start;
+      margin-bottom: 18px;
+    }
+
+    .section-tag {
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      margin: 0;
+      font: 700 clamp(28px, 3vw, 42px)/1.1 var(--serif);
+      letter-spacing: -0.02em;
+    }
+
+    .section-summary {
+      margin: 12px 0 0;
+      color: var(--ink-soft);
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    .claim-card {
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(237,244,255,0.92), rgba(255,255,255,0.84));
+      border: 1px solid rgba(21, 63, 130, 0.1);
+    }
+
+    .claim-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: var(--navy-strong);
+    }
+
+    .claim-card p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .body-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(260px, 0.95fr);
+      gap: 22px;
+    }
+
+    .body-copy,
+    .detail-list,
+    .checklist,
+    .fact-table,
+    .question-list {
+      margin: 0;
+    }
+
+    .body-copy p {
+      margin: 0 0 16px;
+      font-size: 16px;
+      line-height: 1.95;
+    }
+
+    .body-copy strong {
+      color: var(--navy-strong);
+    }
+
+    .pull-quote {
+      margin: 0 0 18px;
+      padding: 18px 20px 18px 24px;
+      border-left: 4px solid var(--cyan);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(223,244,243,0.65), rgba(255,255,255,0.9));
+      font: 700 24px/1.5 var(--serif);
+      color: var(--navy-strong);
+    }
+
+    .inline-figure {
+      margin: 22px 0 4px;
+      padding: 16px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.84);
+      border: 1px solid var(--line);
+    }
+
+    .inline-figure img {
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid rgba(18, 35, 61, 0.08);
+      background: #fff;
+    }
+
+    .inline-figure figcaption {
+      margin-top: 12px;
+      color: var(--ink-soft);
+      font-size: 13px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .pull-quote small {
+      display: block;
+      margin-top: 10px;
+      font: 700 11px/1.3 var(--mono);
+      letter-spacing: 0.12em;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+    }
+
+    .detail-list,
+    .checklist,
+    .question-list {
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .detail-list li,
+    .checklist li,
+    .question-list li {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid var(--line);
+    }
+
+    .detail-list strong,
+    .checklist strong,
+    .question-list strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .detail-list span,
+    .checklist span,
+    .question-list span {
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .fact-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.84);
+    }
+
+    .fact-table th,
+    .fact-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .fact-table th {
+      width: 26%;
+      background: rgba(237,244,255,0.9);
+      font-size: 13px;
+    }
+
+    .fact-table td {
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .fact-table tr:last-child th,
+    .fact-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .fact-callout {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: var(--warn);
+      border: 1px solid rgba(191, 144, 41, 0.18);
+    }
+
+    .fact-callout strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .fact-callout p {
+      margin: 0;
+      color: #6b5526;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .evidence-margin {
+      display: grid;
+      gap: 12px;
+    }
+
+    .evidence-card {
+      padding: 16px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.84);
+      border: 1px solid var(--line);
+    }
+
+    .evidence-card p {
+      margin: 8px 0 0;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .compare-grid,
+    .step-grid,
+    .fact-grid,
+    .source-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .compare-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .compare-card,
+    .step-card,
+    .fact-grid .claim-card,
+    .source-card {
+      padding: 18px 18px 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.86);
+      border: 1px solid var(--line);
+    }
+
+    .compare-card h3,
+    .step-card h3,
+    .source-card h3 {
+      margin: 0 0 10px;
+      font: 700 22px/1.2 var(--serif);
+    }
+
+    .compare-card p,
+    .step-card p,
+    .source-card p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .step-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .step-number {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 12px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      font: 700 14px/1 var(--mono);
+    }
+
+    .source-spread h2,
+    .question-panel h2 {
+      margin: 0 0 12px;
+      font: 700 34px/1.12 var(--serif);
+    }
+
+    .source-spread > p,
+    .question-panel > p {
+      margin: 0 0 18px;
+      color: var(--ink-soft);
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .source-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .source-card a {
+      display: inline-block;
+      margin-top: 12px;
+      font-weight: 700;
+    }
+
+    .questions-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 20px;
+    }
+
+    .question-note {
+      padding: 20px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(13,45,99,0.94), rgba(21,63,130,0.96));
+      color: #fff;
+    }
+
+    .question-note strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .question-note p {
+      margin: 0 0 12px;
+      color: rgba(255,255,255,0.82);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .question-note .footer-note {
+      color: rgba(255,255,255,0.64);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .section-hidden {
+      display: none;
+    }
+
+    .mode-summary-only,
+    .mode-evidence-only {
+      display: none;
+    }
+
+    body[data-mode="summary"] .mode-full-only,
+    body[data-mode="summary"] .mode-evidence-only {
+      display: none !important;
+    }
+
+    body[data-mode="summary"] .mode-summary-only {
+      display: block;
+    }
+
+    body[data-mode="evidence"] .mode-full-only {
+      display: none !important;
+    }
+
+    body[data-mode="evidence"] .mode-evidence-only {
+      display: block;
+    }
+
+    body[data-mode="evidence"] .body-section .body-copy {
+      opacity: 0.7;
+    }
+
+    mark {
+      background: rgba(255, 214, 77, 0.58);
+      padding: 0.05em 0.12em;
+      border-radius: 0.15em;
+    }
+
+    @media (max-width: 1220px) {
+      .document-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .reader-rail {
+        position: static;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .cover-grid,
+      .cover-bottom,
+      .section-head,
+      .body-grid,
+      .questions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cover-stats,
+      .compare-grid,
+      .step-grid,
+      .source-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .document-shell {
+        width: min(calc(100vw - 18px), var(--page-width));
+        margin: 10px auto 40px;
+        gap: 14px;
+      }
+
+      .rail-card,
+      .cover-top,
+      .body-section,
+      .source-spread,
+      .question-panel,
+      .cover-bottom {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .cover {
+        border-radius: 24px;
+      }
+
+      .body-section,
+      .source-spread,
+      .question-panel {
+        border-radius: 22px;
+        padding-top: 22px;
+        padding-bottom: 22px;
+      }
+
+      .cover-title {
+        font-size: clamp(30px, 9vw, 44px);
+      }
+
+      .cover-stats,
+      .compare-grid,
+      .step-grid,
+      .source-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mode-switcher {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body data-mode="full">
+  <div class="document-shell">
+    <aside class="reader-rail">
+      <section class="rail-card">
+        <div class="rail-kicker">html-anything / document</div>
+        <h1 class="rail-title">宠物乘机规则速读</h1>
+        <p class="rail-summary">
+          这不是“宠物能不能带上飞机”的单选题，而是要先分清规则路径。普通宠物、服务犬、精神抚慰犬，背后是三种完全不同的判断逻辑。
+        </p>
+
+        <div class="mode-switcher" aria-label="阅读模式">
+          <button class="mode-button" data-mode="summary" type="button">5 分钟速读</button>
+          <button class="mode-button" data-mode="full" type="button">完整正文</button>
+          <button class="mode-button" data-mode="evidence" type="button">规则核对</button>
+        </div>
+
+        <label class="sr-only" for="search-input">搜索章节</label>
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M10.5 18a7.5 7.5 0 1 1 0-15a7.5 7.5 0 0 1 0 15Zm10 2-5.1-5.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <input id="search-input" class="search-input" type="search" placeholder="搜“服务犬”“托运”“国际航线”">
+        </div>
+
+        <nav class="rail-nav" aria-label="章节导航">
+          <a class="rail-link" href="#section-compare"><strong>先分清类别</strong><span>普通宠物、服务犬、精神抚慰犬，不是一个概念。</span></a>
+          <a class="rail-link" href="#section-checked"><strong>为什么大多走托运</strong><span>普通家养猫狗，多数不是客舱同行逻辑。</span></a>
+          <a class="rail-link" href="#section-oxygen"><strong>“有氧舱”真正该问什么</strong><span>重点不是术语，而是能否安全承运。</span></a>
+          <a class="rail-link" href="#section-service"><strong>服务犬进客舱条件</strong><span>48 小时申请、120 分钟值机、材料齐全。</span></a>
+          <a class="rail-link" href="#section-international"><strong>国际航线风险点</strong><span>规则会变，国家检疫要求也会变。</span></a>
+          <a class="rail-link" href="#section-checklist"><strong>出发前四步检查</strong><span>最实用的一页结论，适合收藏。</span></a>
+        </nav>
+      </section>
+
+      <section class="rail-card">
+        <div class="rail-kicker">一眼结论</div>
+        <div class="mini-verdicts">
+          <div class="mini-verdict">
+            <strong>普通宠物</strong>
+            <p>先看是否符合小动物运输条件，再看航班和机型是否承运。</p>
+          </div>
+          <div class="mini-verdict">
+            <strong>服务犬</strong>
+            <p>只有符合定义并满足申请材料与旅客条件，才可能按客舱规则办理。</p>
+          </div>
+          <div class="mini-verdict">
+            <strong>精神抚慰犬</strong>
+            <p>在国航公开规则里不按服务犬客舱运输处理，通常按宠物运输逻辑走。</p>
+          </div>
+        </div>
+        <button id="copy-summary" class="copy-button" type="button">复制文章摘要</button>
+        <div id="copy-status" class="copy-status" aria-live="polite"></div>
+      </section>
+    </aside>
+
+    <main class="body-stage">
+      <header class="cover">
+        <div class="cover-top">
+          <div class="eyebrow">航空科普 / 公众号成品页面</div>
+          <div class="cover-grid">
+            <div>
+              <h1 class="cover-title">带猫狗坐飞机，最容易踩坑的不是手续，而是你<span class="emphasis">第一步就想错了</span></h1>
+              <p class="deck">
+                能不能进客舱、是不是办个证明就行、精神抚慰犬算不算服务犬，这些问题之所以总在机场变成混乱，往往不是因为准备不够，而是因为一开始就没把规则分流看清楚。对大多数旅客来说，先判断“按哪种规则走”，比先问“能不能带上飞机”更重要。
+              </p>
+              <div class="cover-stats">
+                <div class="stat-card">
+                  <div class="stat-number">3</div>
+                  <div class="stat-text">最容易混淆的运输身份：普通宠物、服务犬、精神抚慰犬。</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">48h</div>
+                  <div class="stat-text">服务犬客舱运输需在航班起飞前至少 48 小时申请。</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">120m</div>
+                  <div class="stat-text">部分需要现场核验的流程，应至少提前 120 分钟到柜台办理。</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">4</div>
+                  <div class="stat-text">出发前最值得确认的核心动作，文末一页讲清。</div>
+                </div>
+              </div>
+            </div>
+            <div class="cover-visual">
+              <img class="hero-image" src="./assets/pet-flight-infographic.png" alt="带宠物乘机规则信息图，展示可随主人登机的犬类分类、申请流程、航司对比与重要提示。">
+            </div>
+          </div>
+        </div>
+        <div class="cover-bottom">
+          <div class="summary-strip">
+            <strong>文章摘要</strong>
+            <p>
+              这篇文章最核心的提醒只有一句话：普通家庭饲养的猫狗，大多数情况下走的是小动物运输规则；真正能按服务犬规则进入客舱的，是符合定义、经过专门训练并由符合条件旅客携带的服务犬。精神抚慰犬在公开规则里通常不等于服务犬。
+            </p>
+          </div>
+          <div class="fact-box">
+            <strong>适合谁看</strong>
+            <p>准备带宠物坐飞机的人、想搞清服务犬规则的人、做航空科普内容的人。</p>
+          </div>
+        </div>
+      </header>
+
+      <section id="section-compare" class="body-section" data-search="普通宠物 服务犬 精神抚慰犬 客舱 托运 分类">
+        <div class="section-head">
+          <div>
+            <div class="section-tag">Section 01</div>
+            <h2 class="section-title">先分清规则身份，再谈能不能登机</h2>
+            <p class="section-summary">
+              大多数误会都不是出在最后一步，而是出在第一步：把普通宠物、服务犬和精神抚慰犬当成了一回事。
+            </p>
+          </div>
+          <div class="claim-card">
+            <strong>一句话判断</strong>
+            <p>如果你带的是普通家庭驯养猫狗，就先按小动物运输逻辑理解；只有符合定义的服务犬，才讨论客舱运输路径。</p>
+          </div>
+        </div>
+
+        <div class="compare-grid">
+          <article class="compare-card">
+            <h3>普通宠物</h3>
+            <p>最常见的是家庭驯养的猫、狗。重点不是“能不能陪主人坐”，而是是否符合小动物运输条件、航班是否承运、容器和证明是否齐全。</p>
+          </article>
+          <article class="compare-card">
+            <h3>服务犬</h3>
+            <p>服务犬是经过专门训练、为残疾人生活和工作提供协助的特种犬。它不是一个情绪表达，而是一种规则定义和训练身份。</p>
+          </article>
+          <article class="compare-card">
+            <h3>精神抚慰犬</h3>
+            <p>在日常语言里常被理解成“能陪伴、能安抚情绪”，但在公开航空规则里，通常并不自动等于可按服务犬客舱规则办理。</p>
+          </article>
+        </div>
+
+        <div class="body-grid" style="margin-top: 18px;">
+          <div class="body-copy">
+            <div class="pull-quote">
+              真正容易让人临场慌乱的，不是手续复杂，而是默认“宠物乘机”只有一种办法。
+              <small>核心误区 / 文章主旨</small>
+            </div>
+            <p>很多人一上来问的是“能不能带上飞机”，但航空公司真正先判断的，是你带的对象属于哪一类运输对象，适用哪一套规则。</p>
+            <p class="mode-full-only">如果是普通家庭驯养的猫狗，首先适用的是小动物运输规则。只有当对象是符合定义、经过专业训练的服务犬，并且由符合条件的旅客携带时，才进入另一条截然不同的客舱服务流程。</p>
+            <p class="mode-full-only">这也是为什么，同样看起来都是“陪主人出行的犬”，规则结果可能完全不同。图上把三种类型并列展示，本身就比很多口头解释更有效，因为它把概念边界先画清楚了。</p>
+            <figure class="inline-figure">
+              <img src="./assets/pet-classification-guide.svg" alt="普通宠物、服务犬、精神抚慰犬的规则分流示意图">
+              <figcaption>先把运输对象的规则身份分清，后面的客舱、托运、申请时限才有意义。</figcaption>
+            </figure>
+          </div>
+          <aside class="evidence-margin">
+            <div class="evidence-card">
+              <div class="source-label">规则抓手</div>
+              <p>国航公开页面将“小动物运输”和“携带客舱运输服务犬服务”分成独立页面，说明两者不是同一条规则路径。</p>
+            </div>
+            <div class="evidence-card">
+              <div class="source-label">阅读建议</div>
+              <p>先看分类，再看时限，再看材料。顺序不要反。</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="section-checked" class="body-section" data-search="托运 小动物运输 普通宠物 猫 狗 客舱 同行">
+        <div class="section-head">
+          <div>
+            <div class="section-tag">Section 02</div>
+            <h2 class="section-title">为什么普通猫狗，大多数情况走的都是托运逻辑</h2>
+            <p class="section-summary">
+              很多旅客说“带宠物坐飞机”，默认想的是“和我一起进客舱”。但对绝大多数普通猫狗来说，航空公司先执行的是小动物运输标准。
+            </p>
+          </div>
+          <div class="claim-card">
+            <strong>最容易忽视的点</strong>
+            <p>不是宠物乖不乖，而是是否符合承运条件、是否被航班和机型接受。</p>
+          </div>
+        </div>
+
+        <div class="body-grid">
+          <div class="body-copy">
+            <p>按国航公开说明，家庭驯养的猫、犬在符合运输条件并经同意的情况下，可以作为限制运输行李办理。这里最关键的不是“有无感情基础”，而是它本身是否符合运输要求。</p>
+            <p class="mode-full-only">短鼻系列猫狗及其杂交品种、怀孕、出生不超过 8 周、哺乳期、分娩 7 天内或生病的猫狗，都可能不予承运。也就是说，不是“只要是宠物就能飞”，而是“先符合运输条件，才谈得上怎么飞”。</p>
+            <p class="mode-full-only">普通旅客真正该提前准备的，不是怎么在柜台说服工作人员，而是宠物健康状态、品种限制、航班承运条件、检疫证明和运输容器是否齐备。</p>
+            <div class="mode-summary-only claim-card">
+              <strong>速读版</strong>
+              <p>普通宠物乘机，大多数情况下不是客舱同行逻辑，而是小动物托运逻辑。越早接受这一点，准备越不会走偏。</p>
+            </div>
+          </div>
+          <div>
+            <table class="fact-table">
+              <tbody>
+                <tr>
+                  <th>普通宠物</th>
+                  <td>核心看是否符合小动物运输条件，以及航班是否允许承运。</td>
+                </tr>
+                <tr>
+                  <th>申请节点</th>
+                  <td>订座时提出申请，经同意后方可运输。</td>
+                </tr>
+                <tr>
+                  <th>现场办理</th>
+                  <td>公开规则提到，相关办理通常应至少在起飞前 120 分钟完成。</td>
+                </tr>
+                <tr>
+                  <th>常见误会</th>
+                  <td>把“乖巧、安静、情绪依赖”误认为“可以走服务犬客舱规则”。</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="fact-callout">
+              <strong>判断顺序别反</strong>
+              <p>先确认宠物能不能运，再确认这一班能不能运，最后才是怎么运。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-oxygen" class="body-section" data-search="有氧舱 安全承运 机型 货舱 A319 A320 737-8MAX ARJ21">
+        <div class="section-head">
+          <div>
+            <div class="section-tag">Section 03</div>
+            <h2 class="section-title">很多人最关心的“有氧舱”，本质上是在问一件更重要的事</h2>
+            <p class="section-summary">
+              真正值得担心的不是术语本身，而是宠物是否能被安全承运，以及你的航班机型是否具备相应条件。
+            </p>
+          </div>
+          <div class="claim-card">
+            <strong>一句提醒</strong>
+            <p>不要把宠物托运当成普通行李托运的顺手附带版，它是一项带条件的特殊运输服务。</p>
+          </div>
+        </div>
+
+        <div class="body-grid">
+          <div class="body-copy">
+            <p>旅客口中的“有氧舱”，本质上是在确认宠物托运后是否处在适合运输的环境里。国航公开规则写得很明确：小动物必须装载在具备供氧能力的货舱内运输。</p>
+            <p class="mode-full-only">同时，A319、A320、737-8MAX、ARJ21-700 等机型的货舱不具备供氧能力，因此不承运小动物。这一点很关键，因为它直接说明，哪怕你准备充分，也可能因为机型条件不满足而无法成行。</p>
+            <p class="mode-full-only">因此，比起反复追问“是不是有氧舱”，更实用的问题应该是：我的宠物能不能被安全承运，这趟航班能不能承运。</p>
+            <figure class="inline-figure">
+              <img src="./assets/pet-oxygen-cabin.svg" alt="有氧舱与机型限制的正文信息图">
+              <figcaption>真正该核对的，不只是“有没有氧”，而是货舱条件、机型限制和你的航班承运资格。</figcaption>
+            </figure>
+          </div>
+          <aside class="evidence-margin">
+            <div class="evidence-card">
+              <div class="source-label">机型限制</div>
+              <p>公开页面直接列出不具备供氧货舱能力的机型，说明运输限制并不是抽象概念，而是具体航班条件。</p>
+            </div>
+            <div class="evidence-card mode-evidence-only">
+              <div class="source-label">核对动作</div>
+              <p>订票后再次确认机型与承运条件，是减少临时改计划的关键一步。</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="section-service" class="body-section" data-search="服务犬 客舱 48小时 120分钟 检疫证书 疫苗 芯片">
+        <div class="section-head">
+          <div>
+            <div class="section-tag">Section 04</div>
+            <h2 class="section-title">真正能按服务犬规则进客舱的，要求远不止“带着犬”</h2>
+            <p class="section-summary">
+              服务犬客舱运输不是机场临时说明一下就能完成的事，而是一整套提前申请、材料核验和现场规范同时成立的流程。
+            </p>
+          </div>
+          <div class="claim-card">
+            <strong>三个关键词</strong>
+            <p>旅客资格、专业训练、提前申请。少一个，都可能直接影响结果。</p>
+          </div>
+        </div>
+
+        <div class="step-grid">
+          <article class="step-card">
+            <div class="step-number">1</div>
+            <h3>确认身份</h3>
+            <p>首先确认是否属于符合条件的残疾旅客，以及所携带犬只是否属于符合定义的服务犬。</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">2</div>
+            <h3>提前申请</h3>
+            <p>按国航公开规则，最迟应在航班预计起飞前 48 小时提出申请，而不是当天临时解释。</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">3</div>
+            <h3>备齐材料</h3>
+            <p>包括有效官方检疫证书、狂犬病疫苗接种证书和相应专业训练证明。</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">4</div>
+            <h3>现场值机</h3>
+            <p>已办妥手续的旅客仍应按要求提前到柜台办理，服务犬进入客舱后还要满足工作衫、牵引索等规范。</p>
+          </article>
+        </div>
+
+        <div class="body-grid" style="margin-top: 20px;">
+          <div class="body-copy">
+            <p>服务犬规则最容易被误解成“只要有证明就行”，但实际上，规则审查的是一整套条件是否同时成立。旅客身份、犬只训练属性、材料、时限和现场执行，缺一不可。</p>
+            <p class="mode-full-only">如果涉及入境，或乘坐国际及地区中转国内航班，犬还需要具备有效芯片。也就是说，越是跨境行程，越不应该靠经验判断，越应该按当次航班重新核对。</p>
+            <figure class="inline-figure">
+              <img src="./assets/pet-service-flow.svg" alt="服务犬客舱运输申请与值机流程示意图">
+              <figcaption>服务犬客舱运输是一整套正式流程，而不是临场解释型服务。</figcaption>
+            </figure>
+          </div>
+          <div>
+            <table class="fact-table">
+              <tbody>
+                <tr>
+                  <th>申请时限</th>
+                  <td>最迟于航班预计起飞前 48 小时提出服务申请。</td>
+                </tr>
+                <tr>
+                  <th>值机时限</th>
+                  <td>已办妥手续的旅客，通常仍需在起飞前 120 分钟到柜台办理乘机手续。</td>
+                </tr>
+                <tr>
+                  <th>基础材料</th>
+                  <td>有效官方检疫证书、狂犬病疫苗接种证书、专业训练证明。</td>
+                </tr>
+                <tr>
+                  <th>额外要求</th>
+                  <td>国际及地区中转国内等场景，可能涉及芯片等附加要求。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-emotional" class="body-section" data-search="精神抚慰犬 情感支持动物 emotional support animal 服务犬 区别">
+        <div class="section-head">
+          <div>
+            <div class="section-tag">Section 05</div>
+            <h2 class="section-title">精神抚慰犬为什么总让人误会</h2>
+            <p class="section-summary">
+              因为日常语言里的“它对我很重要”，和航空规则里的“它属于哪一类运输对象”，根本不是一套判断体系。
+            </p>
+          </div>
+          <div class="claim-card">
+            <strong>最关键的边界</strong>
+            <p>在国航公开说明里，精神抚慰犬不能作为服务犬在客舱运输；有需要时，应在符合小动物运输标准的前提下按宠物运输规则办理。</p>
+          </div>
+        </div>
+
+        <div class="body-grid">
+          <div class="body-copy">
+            <p>很多争议并不是因为规则太复杂，而是因为很多人会把“情感支持动物”“精神抚慰犬”和“服务犬”混着说。可在航空运输规则里，这几个概念并不能直接互换。</p>
+            <p class="mode-full-only">如果你只是从情感意义上非常依赖它，这种重要性并不会自动转化成航空规则里的服务犬资格。航空公司看的不是主观感受，而是训练属性、规则定义和材料路径。</p>
+          </div>
+          <aside class="evidence-margin">
+            <div class="evidence-card">
+              <div class="source-label">内容制作建议</div>
+              <p>这类科普最有价值的地方，不在安慰读者“别紧张”，而在准确告诉读者“哪一步最容易想错”。</p>
+            </div>
+            <div class="evidence-card mode-evidence-only">
+              <div class="source-label">术语提醒</div>
+              <p>“情感支持”不等于“服务犬资格”，不要用生活经验替代专业定义。</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="section-international" class="body-section" data-search="国际航线 美国 入境 检疫 目的地 中转">
+        <div class="section-head">
+          <div>
+            <div class="section-tag">Section 06</div>
+            <h2 class="section-title">只要涉及国际航线，就不要只看一篇攻略</h2>
+            <p class="section-summary">
+              宠物和服务犬运输不是“国内这样，国外也差不多”。一旦涉及出入境，航空公司规则之外，目的地和过境地的检疫要求同样会左右成行。
+            </p>
+          </div>
+          <div class="claim-card">
+            <strong>真正的风险</strong>
+            <p>不是流程麻烦，而是你以为规则没变。国际规则会动态调整，不同页面的更新时间也可能不一致。</p>
+          </div>
+        </div>
+
+        <div class="body-grid">
+          <div class="body-copy">
+            <p>如果你的行程涉及美国，或者任何检疫要求较严的国家和地区，最稳妥的动作永远不是“参考别人怎么飞过”，而是重新核对当次购票页面、航空公司客服和目的地官方要求。</p>
+            <p class="mode-full-only">即便是曾经已经申请成功过的规则路径，也可能因为目的地政策变化、疫苗要求或材料格式变化而受到影响。对国际航线来说，经验只能参考，不能代替复核。</p>
+          </div>
+          <div>
+            <ul class="detail-list">
+              <li>
+                <strong>核对购票页面</strong>
+                <span>这是最接近当次航班执行条件的入口。</span>
+              </li>
+              <li>
+                <strong>联系官方客服</strong>
+                <span>尤其是涉及服务犬、转机、跨境的特殊场景。</span>
+              </li>
+              <li>
+                <strong>检查目的地要求</strong>
+                <span>入境检疫规则和航空公司承运规则，是两套都必须满足的条件。</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-checklist" class="body-section" data-search="清单 检查 出发前 四件事 短鼻类 航班">
+        <div class="section-head">
+          <div>
+            <div class="section-tag">Section 07</div>
+            <h2 class="section-title">真正该提前做的，不是疯狂找攻略，而是先做对这四件事</h2>
+            <p class="section-summary">
+              如果你只想收藏一页，那就是这一页。出发前把下面四步核对完，很多临场慌乱都能提前避免。
+            </p>
+          </div>
+          <div class="claim-card">
+            <strong>收藏建议</strong>
+            <p>把这四步发给同行人、家人或宠物代办服务一起看，比单独记结论更有用。</p>
+          </div>
+        </div>
+
+        <div class="fact-grid">
+          <div class="claim-card">
+            <strong>第一步：先看宠物本身</strong>
+            <p>重点确认健康状态、年龄、是否短鼻类、是否怀孕或处于哺乳期。前提不成立，后面都白搭。</p>
+          </div>
+          <div class="claim-card">
+            <strong>第二步：先分清规则身份</strong>
+            <p>普通宠物、服务犬、精神抚慰犬不是一回事，后续的材料和通道完全不同。</p>
+          </div>
+          <div class="claim-card">
+            <strong>第三步：先问航班能不能承运</strong>
+            <p>不是所有机型、航线、联程方案都适用同一条规则，尤其要留意机型限制。</p>
+          </div>
+          <div class="claim-card">
+            <strong>第四步：国际航线再多核对一步</strong>
+            <p>目的地和过境地的检疫要求，同样会直接影响你能不能顺利出发。</p>
+          </div>
+        </div>
+        <figure class="inline-figure">
+          <img src="./assets/pet-travel-checklist.svg" alt="带宠物乘机出发前四步检查清单信息图">
+          <figcaption>爆款长文最后最好给读者一页能直接收藏、转发、执行的清单。</figcaption>
+        </figure>
+      </section>
+
+      <section class="source-spread" data-search="来源 国航 中国国际航空 资料 依据">
+        <h2>资料来源与页面说明</h2>
+        <p>
+          页面内容依据你整理的公众号稿件与中国国际航空公开页面制作。规则类信息已按 2026 年 5 月 16 日可访问内容进行复核；由于航空公司规则、适用航线及国际检疫要求可能调整，具体承运结果仍应以实际购票页面、航空公司客服及出入境要求为准。
+        </p>
+        <div class="source-grid">
+          <article class="source-card">
+            <h3>作为行李托运的小动物</h3>
+            <p>用于核对普通家庭驯养猫狗的小动物运输条件、品种限制、机型限制和现场办理节点。</p>
+            <a href="https://www.airchina.us/US/CN/info/assistance/pets.html" target="_blank" rel="noreferrer">打开来源</a>
+          </article>
+          <article class="source-card">
+            <h3>携带客舱运输服务犬服务</h3>
+            <p>用于核对服务犬客舱运输的申请时限、值机时限、材料要求和机上规范。</p>
+            <a href="https://m.airchina.com.cn/c/invoke/specialService/transportationDogInstruction%40pg" target="_blank" rel="noreferrer">打开来源</a>
+          </article>
+          <article class="source-card">
+            <h3>特殊旅客服务方案</h3>
+            <p>用于补充核对情感支持动物、精神抚慰犬及国际限制提示的公开说明。</p>
+            <a href="https://m.airchina.com.cn/c/invoke/specialAssistance%40pg" target="_blank" rel="noreferrer">打开来源</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="question-panel" data-search="评论 引导 收藏 转发 下一篇 选题">
+        <h2>适合放在文末的引导语</h2>
+        <p>这个页面同时保留了文章结论和传播语气，你可以直接从下面挑一句放进公众号结尾，和首图的信息图风格是统一的。</p>
+        <div class="questions-grid">
+          <ul class="question-list">
+            <li>
+              <strong>转发型</strong>
+              <span>如果你身边也有人正准备带宠物出行，可以先把这篇转给他。很多时候，少走的不是流程，而是弯路。</span>
+            </li>
+            <li>
+              <strong>评论型</strong>
+              <span>你遇到过最离谱的宠物乘机误区是什么？欢迎在评论区聊聊，我们后面也可以继续做不同航司的规则对比。</span>
+            </li>
+            <li>
+              <strong>收藏型</strong>
+              <span>航空规则最怕想当然，宠物出行更是这样。收藏这篇，出发前再核对一遍，会省掉很多临场慌乱。</span>
+            </li>
+          </ul>
+          <div class="question-note">
+            <strong>制作备注</strong>
+            <p>这份 HTML 已经按蓝白航空科普的视觉方向写好，首屏直接使用你提供的信息图作为主视觉，后续如果你想继续扩成整套专题页，也可以在这个结构上再加配图模块和航司对比模块。</p>
+            <div class="footer-note">artifact / output.html</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const body = document.body;
+      const modeButtons = Array.from(document.querySelectorAll(".mode-button"));
+      const searchInput = document.getElementById("search-input");
+      const railLinks = Array.from(document.querySelectorAll(".rail-link"));
+      const sections = Array.from(document.querySelectorAll(".body-section, .source-spread, .question-panel"));
+      const copyButton = document.getElementById("copy-summary");
+      const copyStatus = document.getElementById("copy-status");
+
+      modeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          body.dataset.mode = button.dataset.mode;
+        });
+      });
+
+      const normalizeText = (value) => value
+        .toLowerCase()
+        .replace(/\s+/g, " ")
+        .trim();
+
+      const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+      const clearHighlights = (root) => {
+        root.querySelectorAll("mark").forEach((mark) => {
+          const text = document.createTextNode(mark.textContent);
+          mark.replaceWith(text);
+        });
+      };
+
+      const highlight = (root, query) => {
+        if (!query) return;
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+          acceptNode(node) {
+            if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+            if (node.parentElement && ["SCRIPT", "STYLE", "MARK"].includes(node.parentElement.tagName)) {
+              return NodeFilter.FILTER_REJECT;
+            }
+            return NodeFilter.FILTER_ACCEPT;
+          }
+        });
+
+        const regex = new RegExp(escapeRegExp(query), "ig");
+        const targets = [];
+        while (walker.nextNode()) {
+          if (regex.test(walker.currentNode.nodeValue)) {
+            targets.push(walker.currentNode);
+          }
+          regex.lastIndex = 0;
+        }
+
+        targets.forEach((node) => {
+          const fragment = document.createDocumentFragment();
+          const value = node.nodeValue;
+          let lastIndex = 0;
+          value.replace(regex, (match, offset) => {
+            fragment.appendChild(document.createTextNode(value.slice(lastIndex, offset)));
+            const mark = document.createElement("mark");
+            mark.textContent = match;
+            fragment.appendChild(mark);
+            lastIndex = offset + match.length;
+            return match;
+          });
+          fragment.appendChild(document.createTextNode(value.slice(lastIndex)));
+          node.parentNode.replaceChild(fragment, node);
+        });
+      };
+
+      const runSearch = () => {
+        const query = normalizeText(searchInput.value);
+        sections.forEach((section) => {
+          clearHighlights(section);
+          const haystack = normalizeText(section.textContent + " " + (section.dataset.search || ""));
+          const isMatch = !query || haystack.includes(query);
+          section.classList.toggle("section-hidden", !isMatch);
+          if (isMatch && query) {
+            highlight(section, query);
+          }
+        });
+      };
+
+      searchInput.addEventListener("input", runSearch);
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          railLinks.forEach((link) => {
+            const targetId = link.getAttribute("href").slice(1);
+            link.classList.toggle("active", targetId === entry.target.id);
+          });
+        });
+      }, {
+        rootMargin: "-20% 0px -60% 0px",
+        threshold: [0.2, 0.5, 0.8]
+      });
+
+      sections
+        .filter((section) => section.id)
+        .forEach((section) => observer.observe(section));
+
+      copyButton.addEventListener("click", async () => {
+        const summary = "普通家庭饲养的猫狗，大多数情况下走的是小动物运输规则；能按服务犬规则进入客舱的，是符合定义、经过专门训练并由符合条件旅客携带的服务犬。精神抚慰犬，不等于服务犬。";
+        try {
+          await navigator.clipboard.writeText(summary);
+          copyStatus.textContent = "摘要已复制，可以直接贴到公众号摘要或社群转发文案里。";
+        } catch (error) {
+          copyStatus.textContent = "当前浏览器未允许剪贴板写入，请手动复制首屏摘要。";
+        }
+      });
+    }());
+  </script>
+</body>
+</html>

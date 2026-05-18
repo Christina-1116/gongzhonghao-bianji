@@ -1,0 +1,76 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="100" y1="40" x2="1090" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAFCFF"/>
+      <stop offset="1" stop-color="#EEF5FD"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F6FAFE"/>
+    </linearGradient>
+    <filter id="shadow" x="18" y="18" width="1164" height="724" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#173A72" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="760" rx="34" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="34" y="34" width="1132" height="692" rx="30" fill="white" fill-opacity="0.86"/>
+  </g>
+
+  <text x="76" y="148" fill="#173A72" font-size="60" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">先分清对象身份</text>
+  <text x="76" y="214" fill="#173A72" font-size="60" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">再谈能不能进客舱</text>
+  <text x="78" y="268" fill="#617B99" font-size="24" font-family="PingFang SC, Microsoft YaHei, sans-serif">第一步不是问“能不能带”，而是先分清“你走的是哪条规则”。</text>
+
+  <g>
+    <rect x="878" y="92" width="228" height="236" rx="28" fill="#F7FBFF" stroke="#DCE9F7" stroke-width="2"/>
+    <rect x="930" y="126" width="124" height="124" rx="62" fill="#EAF2FC"/>
+    <rect x="948" y="144" width="88" height="88" rx="44" fill="#2A5394"/>
+    <circle cx="982" cy="186" r="8" fill="#8DC0E5"/>
+    <circle cx="1006" cy="186" r="8" fill="#8DC0E5"/>
+    <path d="M964 218C971 205 985 198 998 198C1012 198 1024 205 1030 218" stroke="#B6D5EE" stroke-width="8" stroke-linecap="round"/>
+    <text x="920" y="284" fill="#667F9D" font-size="17" font-family="PingFang SC, Microsoft YaHei, sans-serif">看起来都像陪主人出行</text>
+    <text x="920" y="312" fill="#173A72" font-size="24" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">但规则身份不同</text>
+  </g>
+
+  <line x1="190" y1="360" x2="1010" y2="360" stroke="#CFE0F1" stroke-width="3"/>
+  <circle cx="190" cy="360" r="12" fill="#1F4A8D"/>
+  <circle cx="600" cy="360" r="12" fill="#1F4A8D"/>
+  <circle cx="1010" cy="360" r="12" fill="#1F4A8D"/>
+
+  <g>
+    <rect x="76" y="404" width="322" height="246" rx="26" fill="url(#card)" stroke="#D8E6F4" stroke-width="2"/>
+    <rect x="106" y="432" width="92" height="92" rx="26" fill="#EAF3FC"/>
+    <circle cx="140" cy="470" r="8" fill="#5F9FCE"/>
+    <circle cx="164" cy="470" r="8" fill="#5F9FCE"/>
+    <path d="M116 502C124 482 138 470 152 470C167 470 181 481 188 502" stroke="#234D8B" stroke-width="8" stroke-linecap="round"/>
+    <text x="104" y="566" fill="#173A72" font-size="33" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">普通宠物</text>
+    <text x="104" y="604" fill="#556F8C" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif">先按小动物运输规则判断</text>
+    <text x="104" y="634" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">看健康、品种、机型，</text>
+    <text x="104" y="658" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">再看箱体和检疫材料。</text>
+  </g>
+
+  <g>
+    <rect x="438" y="404" width="322" height="246" rx="26" fill="url(#card)" stroke="#D8E6F4" stroke-width="2"/>
+    <rect x="468" y="432" width="92" height="92" rx="26" fill="#E9F6F4"/>
+    <path d="M494 480L512 498L538 458L556 472" stroke="#15786B" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="468" y="566" fill="#173A72" font-size="33" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">服务犬</text>
+    <text x="468" y="604" fill="#556F8C" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif">符合定义，才进入客舱路径</text>
+    <text x="468" y="634" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">重点看旅客资格、训练、</text>
+    <text x="468" y="658" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">时限和证明材料。</text>
+  </g>
+
+  <g>
+    <rect x="800" y="404" width="322" height="246" rx="26" fill="url(#card)" stroke="#D8E6F4" stroke-width="2"/>
+    <rect x="830" y="432" width="92" height="92" rx="26" fill="#FFF4E8"/>
+    <path d="M852 466H906" stroke="#D48C31" stroke-width="8" stroke-linecap="round"/>
+    <path d="M852 500H886" stroke="#D48C31" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="898" cy="500" r="9" fill="#F2B65E"/>
+    <text x="830" y="566" fill="#173A72" font-size="33" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">精神抚慰犬</text>
+    <text x="830" y="604" fill="#556F8C" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif">不自动等于服务犬资格</text>
+    <text x="830" y="634" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">如果要运输，通常回到</text>
+    <text x="830" y="658" fill="#556F8C" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">普通宠物规则里判断。</text>
+  </g>
+
+  <text x="76" y="706" fill="#7E93AA" font-size="18" font-family="PingFang SC, Microsoft YaHei, sans-serif">图示重点：先分规则身份，再谈能不能同行；这一步不清，后面越准备越乱。</text>
+</svg>

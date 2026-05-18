@@ -1,0 +1,64 @@
+<svg width="1600" height="1040" viewBox="0 0 1600 1040" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="24" x2="1480" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FCFEFF"/>
+      <stop offset="1" stop-color="#EEF5FD"/>
+    </linearGradient>
+    <filter id="shadow" x="22" y="22" width="1556" height="996" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#16396F" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1040" rx="34" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="34" y="34" width="1532" height="972" rx="32" fill="white" fill-opacity="0.92"/>
+  </g>
+  <rect x="56" y="56" width="418" height="56" rx="18" fill="#1E57A3"/>
+  <text x="88" y="92" fill="white" font-size="26" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">四、靠窗 vs 靠过道，怎么选？</text>
+
+  <g>
+    <rect x="52" y="132" width="1496" height="846" rx="28" fill="#FCFEFF" stroke="#D9E6F4" stroke-width="2"/>
+    <text x="84" y="198" fill="#173A72" font-size="52" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">没有标准答案</text>
+    <text x="84" y="254" fill="#173A72" font-size="52" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">看你这趟更想解决什么</text>
+    <text x="86" y="306" fill="#647E9D" font-size="22" font-family="PingFang SC, Microsoft YaHei, sans-serif">靠窗解决的是体验感，靠过道解决的是行动自由。中间位通常是最不值得主动选的位置。</text>
+
+    <rect x="84" y="360" width="500" height="384" rx="24" fill="#FFFFFF" stroke="#D7E5F4" stroke-width="2"/>
+    <rect x="100" y="380" width="150" height="44" rx="16" fill="#EAF3FD"/>
+    <text x="137" y="410" fill="#214F90" font-size="26" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">选靠窗</text>
+    <g transform="translate(118 462)">
+      <rect x="0" y="0" width="150" height="170" rx="24" fill="#EAF3FD"/>
+      <rect x="42" y="24" width="66" height="122" rx="18" fill="#FFFFFF"/>
+      <path d="M58 84H92" stroke="#93C0E6" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <text x="304" y="488" fill="#214F90" font-size="23" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">更适合</text>
+    <text x="304" y="526" fill="#5E7897" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif">想看风景 / 想拍照 / 靠着睡</text>
+    <text x="304" y="558" fill="#5E7897" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif">第一次坐飞机 / 容易晕机</text>
+    <text x="118" y="680" fill="#214F90" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">代价：起身麻烦，去洗手间要打扰别人</text>
+
+    <rect x="1016" y="360" width="500" height="384" rx="24" fill="#FFFFFF" stroke="#D7E5F4" stroke-width="2"/>
+    <rect x="1032" y="380" width="166" height="44" rx="16" fill="#EAF3FD"/>
+    <text x="1088" y="410" fill="#214F90" font-size="26" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">选靠过道</text>
+    <g transform="translate(1268 462)">
+      <rect x="0" y="0" width="150" height="170" rx="24" fill="#F3F7FC"/>
+      <rect x="44" y="26" width="62" height="118" rx="18" fill="#5E92D3"/>
+    </g>
+    <text x="1048" y="488" fill="#214F90" font-size="23" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">更适合</text>
+    <text x="1048" y="526" fill="#5E7897" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif">长途飞行 / 需要频繁起身</text>
+    <text x="1048" y="558" fill="#5E7897" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif">想随时活动 / 不想每次跨人</text>
+    <text x="1048" y="680" fill="#214F90" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">代价：更容易被路过的人和服务打断</text>
+
+    <rect x="624" y="360" width="360" height="384" rx="24" fill="#FBFDFF" stroke="#D7E5F4" stroke-width="2"/>
+    <text x="674" y="428" fill="#173A72" font-size="28" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">你的需求</text>
+    <line x1="672" y1="468" x2="936" y2="468" stroke="#DDE8F3" stroke-width="2"/>
+    <text x="682" y="526" fill="#5E7897" font-size="19" font-family="PingFang SC, Microsoft YaHei, sans-serif">想拍照 / 看风景</text>
+    <text x="682" y="580" fill="#5E7897" font-size="19" font-family="PingFang SC, Microsoft YaHei, sans-serif">想随时上厕所，不想打扰别人</text>
+    <text x="682" y="634" fill="#5E7897" font-size="19" font-family="PingFang SC, Microsoft YaHei, sans-serif">容易晕机，想把视线放远</text>
+    <text x="682" y="688" fill="#5E7897" font-size="19" font-family="PingFang SC, Microsoft YaHei, sans-serif">长途飞行，需要经常活动</text>
+    <text x="682" y="742" fill="#5E7897" font-size="19" font-family="PingFang SC, Microsoft YaHei, sans-serif">第一次坐飞机，想要体验感</text>
+
+    <text x="118" y="810" fill="#173A72" font-size="26" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">一句话</text>
+    <text x="220" y="810" fill="#5E7897" font-size="22" font-family="PingFang SC, Microsoft YaHei, sans-serif">靠窗更偏体验型需求，靠过道更偏功能型需求。</text>
+
+    <rect x="84" y="876" width="1432" height="58" rx="18" fill="#EDF5FD"/>
+    <text x="800" y="914" text-anchor="middle" fill="#173A72" font-size="22" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">中间位：除非你们本来就是一起出行，否则通常最不值得主动选。</text>
+  </g>
+</svg>

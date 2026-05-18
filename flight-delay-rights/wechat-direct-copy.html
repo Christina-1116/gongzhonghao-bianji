@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>微信公众号粘贴版｜飞机延误时，你真正有的6项权益</title>
+  <style>
+    :root {
+      --bg: #eef5fd;
+      --paper: rgba(255, 255, 255, 0.96);
+      --ink: #18314f;
+      --soft: #617795;
+      --line: #d8e5f3;
+      --blue: #1f5ea8;
+      --blue-deep: #153f76;
+      --orange: #ff7a1a;
+      --shadow: 0 18px 60px rgba(16, 52, 102, 0.10);
+      --serif: "Source Han Serif SC", "Noto Serif SC", "Songti SC", "STSong", serif;
+      --sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --mono: "SF Mono", "JetBrains Mono", "Menlo", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top right, rgba(156, 205, 255, 0.42), transparent 28%),
+        radial-gradient(circle at top left, rgba(255, 170, 108, 0.14), transparent 24%),
+        linear-gradient(180deg, #eaf2fb 0%, var(--bg) 36%, #f7fbff 100%);
+      color: var(--ink);
+      font: 16px/1.9 var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: min(980px, calc(100vw - 24px));
+      margin: 18px auto 56px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid rgba(216, 229, 243, 0.95);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .header {
+      position: relative;
+      overflow: hidden;
+      padding: 28px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,250,255,0.98)),
+        linear-gradient(90deg, rgba(31,94,168,0.05), rgba(255,122,26,0.05));
+    }
+
+    .header::after {
+      content: "";
+      position: absolute;
+      right: -60px;
+      top: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(111,177,243,0.20), rgba(111,177,243,0));
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--soft);
+      font: 700 11px/1.2 var(--mono);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(31,94,168,0.2), rgba(31,94,168,0.8));
+    }
+
+    .title {
+      max-width: 760px;
+      margin: 16px 0 10px;
+      font: 700 42px/1.16 var(--serif);
+      letter-spacing: -0.03em;
+      color: var(--blue-deep);
+    }
+
+    .title .accent {
+      color: var(--orange);
+    }
+
+    .subtitle {
+      max-width: 740px;
+      margin: 0;
+      color: var(--soft);
+      font-size: 17px;
+    }
+
+    .hero {
+      padding: 16px;
+    }
+
+    .hero img,
+    .article img {
+      width: 100%;
+      display: block;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+    }
+
+    .summary-band {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 12px;
+      padding: 18px;
+    }
+
+    .summary-item {
+      padding: 16px 14px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #ffffff, #f4f9ff);
+      border: 1px solid var(--line);
+    }
+
+    .summary-item b {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--blue-deep);
+      font-size: 15px;
+    }
+
+    .summary-item span {
+      color: var(--soft);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 18px;
+    }
+
+    .panel {
+      padding: 24px;
+    }
+
+    .panel h2 {
+      margin: 0 0 14px;
+      font: 700 24px/1.24 var(--serif);
+      color: var(--blue-deep);
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #fbfdff, #eef5ff);
+      border: 1px solid var(--line);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .meta-list,
+    .copy-list,
+    .quick-list,
+    .checklist {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .meta-list li,
+    .copy-list li,
+    .quick-list li,
+    .checklist li {
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff, #f8fbff);
+    }
+
+    .meta-list strong,
+    .copy-list strong,
+    .quick-list strong,
+    .checklist strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--blue);
+      font-size: 14px;
+    }
+
+    .article-wrap {
+      padding: 30px;
+    }
+
+    .article {
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    .article-title {
+      margin: 0 0 14px;
+      text-align: center;
+      font: 700 38px/1.22 var(--serif);
+      letter-spacing: -0.03em;
+      color: var(--blue-deep);
+    }
+
+    .article-deck {
+      margin: 0 0 20px;
+      text-align: center;
+      color: var(--soft);
+      font-size: 17px;
+    }
+
+    .divider {
+      width: 92px;
+      height: 4px;
+      margin: 0 auto 26px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #9bc6f5, #1f5ea8 62%, #ff7a1a);
+    }
+
+    .lead-box {
+      margin: 0 0 24px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      border: 1px solid #d6e4f4;
+      background: linear-gradient(135deg, rgba(31,94,168,0.07), rgba(255,122,26,0.07));
+      color: var(--blue-deep);
+      font: 700 23px/1.65 var(--serif);
+    }
+
+    .article p {
+      margin: 0 0 18px;
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 2;
+    }
+
+    .article figure {
+      margin: 28px 0 32px;
+    }
+
+    .article figcaption {
+      margin-top: 12px;
+      color: #7387a3;
+      font-size: 14px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .section-anchor {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 32px 0 12px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #f7fbff, #edf5ff);
+      border: 1px solid var(--line);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .section-anchor::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--orange);
+      box-shadow: 0 0 0 4px rgba(255, 122, 26, 0.18);
+    }
+
+    .article h3 {
+      margin: 12px 0 16px;
+      font: 700 30px/1.32 var(--serif);
+      color: var(--blue-deep);
+    }
+
+    .gold-underline {
+      font-weight: 700;
+      background-image: linear-gradient(transparent 65%, rgba(255, 188, 109, 0.48) 0);
+      background-repeat: no-repeat;
+    }
+
+    .key {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    blockquote {
+      margin: 24px 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--orange);
+      border-radius: 0 18px 18px 0;
+      background: linear-gradient(180deg, #fff9f4, #fffdf9);
+      color: #9b5312;
+      font: 700 24px/1.62 var(--serif);
+    }
+
+    .summary-box,
+    .tip-box,
+    .closing-box {
+      margin: 22px 0;
+      padding: 18px 20px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #fbfdff, #f4f9ff);
+    }
+
+    .summary-box strong,
+    .tip-box strong,
+    .closing-box strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--blue);
+    }
+
+    .closing-box {
+      background: linear-gradient(180deg, #fafffd, #eef9f5);
+      border-color: #d5eadf;
+    }
+
+    .hook-list {
+      margin: 16px 0 24px;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .hook-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--soft);
+      font-size: 15px;
+    }
+
+    .hook-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, var(--orange), #ffb56d);
+    }
+
+    .note {
+      margin-top: 24px;
+      color: #6f819b;
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .toolbar {
+      position: sticky;
+      bottom: 16px;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .toolbar-inner {
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(216,229,243,0.96);
+      background: rgba(255,255,255,0.94);
+      box-shadow: 0 16px 40px rgba(18, 45, 93, 0.14);
+      backdrop-filter: blur(14px);
+      pointer-events: auto;
+    }
+
+    .toolbar button {
+      border: 0;
+      border-radius: 999px;
+      padding: 11px 18px;
+      font: 600 14px/1 var(--sans);
+      cursor: pointer;
+      background: #edf5ff;
+      color: var(--blue);
+    }
+
+    .toolbar button.primary {
+      background: linear-gradient(90deg, var(--blue), #2d6ec0);
+      color: white;
+    }
+
+    .toolbar button.warm {
+      background: linear-gradient(90deg, #fff1e4, #ffe7d5);
+      color: #bb5a11;
+    }
+
+    .status {
+      position: fixed;
+      left: 50%;
+      bottom: 88px;
+      transform: translateX(-50%) translateY(12px);
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(31,94,168,0.96);
+      color: white;
+      font-size: 13px;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.25s ease;
+      box-shadow: 0 16px 40px rgba(18, 45, 93, 0.18);
+    }
+
+    .status.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    @media (max-width: 920px) {
+      .summary-band {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 860px) {
+      .grid,
+      .summary-band {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .title { font-size: 34px; }
+      .article-title { font-size: 30px; }
+      .article h3 { font-size: 24px; }
+      .lead-box, blockquote { font-size: 21px; }
+      .toolbar-inner { width: calc(100vw - 24px); justify-content: center; }
+      .toolbar button { flex: 1; }
+      .article-wrap, .panel, .header { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="card header">
+      <div class="eyebrow">Wechat Ready Article</div>
+      <h1 class="title">飞机延误时，你真正有的<span class="accent">6项权益</span>，一篇讲清</h1>
+      <p class="subtitle">这版按现有航空公众号成稿风格排好：标题、摘要、正文、配图顺序、文末收藏图和一键复制都已整理，适合直接进入发布前检查。</p>
+    </section>
+
+    <section class="card hero">
+      <img src="./assets/cover.png" alt="飞机延误时的旅客权益封面图">
+    </section>
+
+    <section class="card summary-band">
+      <div class="summary-item">
+        <b>知情权</b>
+        <span>官方应及时发布延误或取消信息，别只听现场传闻。</span>
+      </div>
+      <div class="summary-item">
+        <b>退改签</b>
+        <span>先问清延误原因，再判断能否免费改期、签转或退票。</span>
+      </div>
+      <div class="summary-item">
+        <b>餐食住宿</b>
+        <span>有保障，但责任边界要看延误原因和发生地点。</span>
+      </div>
+      <div class="summary-item">
+        <b>延误证明</b>
+        <span>报销、理赔、后续沟通，很多时候都靠它。</span>
+      </div>
+      <div class="summary-item">
+        <b>机上延误</b>
+        <span>30分钟动态、2小时水食、3小时无明确起飞可下机等待。</span>
+      </div>
+      <div class="summary-item">
+        <b>争议确认</b>
+        <span>对原因或证明有异议，不是只能自己吃亏。</span>
+      </div>
+    </section>
+
+    <section class="grid">
+      <section class="card panel">
+        <h2>后台填写信息</h2>
+        <div class="chip-row">
+          <div class="chip">封面已生成</div>
+          <div class="chip">3 张正文图</div>
+          <div class="chip">1 张收藏海报</div>
+        </div>
+        <ul class="meta-list">
+          <li>
+            <strong>建议标题</strong>
+            飞机延误时，你真正有的6项权益，一篇讲清
+          </li>
+          <li>
+            <strong>建议摘要</strong>
+            航班延误后，很多人最先问的是“能赔多少”。但真正更值得先弄清楚的，是信息通知、退改签、食宿安排、延误证明和机上延误保障。这篇按照民航局公开规则，把旅客最常用、也最容易误解的权益一次讲清楚。
+          </li>
+          <li>
+            <strong>配图顺序</strong>
+            首图放封面图；正文第2节后放“6项权益总览”；第4节后放“餐食住宿边界”；第6节后放“机上延误关键节点”；文末放“延误处理顺序”收藏图。
+          </li>
+          <li>
+            <strong>适合的风格</strong>
+            延误焦虑场景 + 权益清单式表达，信息清楚，适合保存和转发。
+          </li>
+        </ul>
+      </section>
+
+      <section class="card panel">
+        <h2>复制建议</h2>
+        <ul class="copy-list">
+          <li>
+            <strong>最稳妥的发法</strong>
+            先在公众号后台填标题和摘要，再上传封面图；正文从下方“正文粘贴版”开始整段复制。
+          </li>
+          <li>
+            <strong>关于图片</strong>
+            图片建议在后台单独上传并插入对应位置，不要依赖本地路径自动带入。
+          </li>
+          <li>
+            <strong>关于事实边界</strong>
+            文章已经把“补偿不是全国统一规则”写清，但发布前仍建议你按当下航司规则再看一眼表述。
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="card panel">
+      <h2>文章钩子</h2>
+      <ul class="quick-list">
+        <li>
+          <strong>最适合加粗的一句</strong>
+          航班延误后，旅客最先该盯的，不是赔偿金额，而是自己眼下真正能用上的那几项权益。
+        </li>
+        <li>
+          <strong>最适合传播的一句</strong>
+          赔偿是结果项，信息、退改签、食宿、证明，才是处理延误时真正的先手。
+        </li>
+        <li>
+          <strong>最适合评论区互动的一句</strong>
+          你遇到过最崩溃的一次航班延误是什么情况？欢迎在评论区说说。
+        </li>
+      </ul>
+    </section>
+
+    <section class="card article-wrap">
+      <article id="article-body" class="article">
+        <h1 class="article-title">飞机延误时，你真正有的6项权益，一篇讲清</h1>
+        <p class="article-deck">别只盯赔偿，真正更重要的，是先把信息、退改签、食宿、证明和机上延误保障弄明白</p>
+        <div class="divider"></div>
+
+        <img src="./assets/cover.png" alt="飞机延误时的旅客权益封面图">
+
+        <p>每次一遇到航班延误，机场里最常见的两句话就是：<span class="gold-underline">“到底几点飞？”“这个能赔吗？”</span></p>
+        <p>说实话，很多人一遇到延误，第一反应就盯着赔偿。可真正最容易耽误事的，往往不是赔偿没谈下来，而是<span class="key">你该拿到的信息没拿到、该办的退改没及时办、该开的证明没开。</span></p>
+        <p>而且还有一个很容易被忽略的事实：<span class="gold-underline">不是所有延误，航空公司都一定要赔。</span></p>
+
+        <div class="lead-box">航班延误后，旅客最先该盯的，不是赔偿金额，而是自己眼下真正能用上的那几项权益。</div>
+
+        <ul class="hook-list">
+          <li>很多争执不是因为你没道理，而是因为你一开始没有抓对重点。</li>
+          <li>补偿、服务保障、退改签权益是三件事，混在一起最容易越吵越乱。</li>
+          <li>真正更值钱的，往往是信息和处理顺序，而不是最后那一句“赔不赔”。</li>
+        </ul>
+
+        <blockquote>赔偿是结果项，信息、退改签、食宿、证明，才是处理延误时真正的先手。</blockquote>
+
+        <div class="section-anchor">最大的误区</div>
+        <h3>一、不是所有延误都有赔偿</h3>
+        <p>很多人默认认为，只要飞机延误，航空公司就该赔钱。可按民航局公开信息，航空公司是否对航班延误进行补偿，补偿的条件、标准和方式，通常写在各自的运输总条件里，<span class="gold-underline">并不是全国所有航司都按同一个金额、同一套规则执行。</span></p>
+        <p>这意味着“延误了有没有补偿”，本来就是一件<span class="key">要看航司规则、也要看延误原因</span>的事。</p>
+        <p>所以真正更实用的顺序不是一上来追着问“赔多少”，而是先把下面几件事确认清楚：<strong>延误原因是什么、有没有正式通知、这张票现在怎么退怎么改、是否有餐食或住宿安排、要不要开延误或取消证明。</strong></p>
+
+        <div class="summary-box">
+          延误后最先该问的不是“赔多少”，而是<span class="gold-underline">“我现在能马上用上的权益是什么”。</span> 顺序一错，后面很容易越处理越乱。
+        </div>
+
+        <div class="section-anchor">这6项权益</div>
+        <h3>二、旅客真正最常用的6项权益，其实是这几类</h3>
+        <p>如果把航班延误后的常见权益拆开来看，大多数旅客真正会用到的，基本就是六类：<span class="key">知情权、退改签、餐食住宿、延误证明、机上延误保障，以及出现争议后的进一步确认。</span></p>
+        <p>这六类里，有的是一发生延误就应该立刻得到的，比如信息通知；有的是看原因和规则来处理的，比如退改签和补偿；也有的是很多人平时想不到，但真要报销、理赔或维权时非常关键的，比如<span class="gold-underline">延误证明。</span></p>
+
+        <figure>
+          <img src="./assets/figure-1-rights-overview.png" alt="航班延误后旅客最常用的6项核心权益总览图">
+          <figcaption>先把框架看清楚，后面就不会把“补偿”“保障”“退改签”混成一件事。</figcaption>
+        </figure>
+
+        <div class="tip-box">
+          一旦知道自己该盯哪几类权益，遇到延误时就不会只会重复追问“赔不赔”，而是能更快<span class="gold-underline">进入处理状态。</span>
+        </div>
+
+        <div class="section-anchor">先看通知</div>
+        <h3>三、知情权：延误时先确认官方通知</h3>
+        <p>航班一旦出现不正常情况，旅客首先拥有的，是被及时告知的权利。根据民航局发布的航空旅行常识，航空公司在掌握航班状态发生变化之后，应在<strong>30分钟内</strong>通过公共信息平台、官网、呼叫中心、短信、电话、广播等方式，及时、准确地发布航班延误或者取消信息，包括原因和航班动态。</p>
+        <p>机场也应通过候机楼公共平台及时通告；如果你是通过代理渠道买的票，代理方在接到航空公司通知后，也应<span class="key">及时通知你。</span></p>
+        <p><span class="gold-underline">延误时第一件事，不是到处问小道消息，而是确认官方通知。</span></p>
+
+        <div class="section-anchor">最容易吵起来的两件事</div>
+        <h3>四、退改签和食宿，不是所有情况都按同一套处理</h3>
+        <p>航班延误或者取消后，旅客可以根据情况办理退票或改签。但真正关键的是，<span class="gold-underline">不同原因，退改签处理边界并不完全一样。</span></p>
+        <p>如果是航空公司自身原因导致旅客非自愿变更客票，在有可利用座位，或者被签转航空公司同意的情况下，航空公司或者其销售代理人应办理<strong>免费改期或者签转。</strong></p>
+        <p>如果不是航空公司原因，比如天气、空管或突发事件，则通常要按该航司适用的运输总条件和客票使用条件办理，<span class="key">不能简单按同一标准理解。</span></p>
+        <p>食宿也是一样。航空公司自身原因导致的出港延误或取消，通常应提供餐食或住宿等服务；天气、空管等非航空公司原因导致的，通常是协助安排，但<span class="gold-underline">费用边界不同。</span></p>
+        <p>不过经停延误和备降属于容易被忽视的特殊情况：对国内航班，经停延误或备降时，不论什么原因，航空公司都应向相关旅客提供餐食或者住宿服务，这一点尤其值得<span class="key">单独记住。</span></p>
+
+        <figure>
+          <img src="./assets/figure-2-meals-hotel.png" alt="航班延误时餐食和住宿边界对比图">
+          <figcaption>不是同样叫“延误”，餐食和住宿责任就一定一样。真正决定边界的，是延误原因和发生地点。</figcaption>
+        </figure>
+
+        <div class="summary-box">
+          不要只问“能不能改”“给不给住”。直接问清楚：<span class="gold-underline">这次属于哪类原因、我这张票现在怎么改、有没有餐食或住宿安排、费用由谁承担。</span>
+        </div>
+
+        <div class="section-anchor">证明别忘了</div>
+        <h3>五、延误证明：很多后续问题都靠它</h3>
+        <p>很多人直到要向单位说明、申请保险理赔或者保留维权凭据时，才想起来自己需要一份<span class="gold-underline">延误证明。</span></p>
+        <p>按民航局公开说明，航班出港延误、到港延误或者取消后，旅客可以根据实际发生情况和需求，要求承运人出具航班延误或取消的<span class="key">书面证明。</span></p>
+        <p>如果你对航空公司出具的证明内容有异议，还可以通过 `12326` 对应的民航服务质量监督平台申请对航班延误、取消原因进行确认；经确认有误的，旅客要求承运人重新提供时，承运人应在规定时间内重新提供。</p>
+        <p>另外，按航班延误取消原因确认工作程序，旅客通常需要在客票载明乘机日期起一年内提出原因确认申请，并提供<span class="gold-underline">乘机凭证、航班信息和有效联系方式。</span></p>
+
+        <div class="tip-box">
+          很多权益不是当场吵出来的，而是靠你把<span class="key">短信、截图、票面、广播通知和延误证明</span>留完整。
+        </div>
+
+        <div class="section-anchor">人在飞机上时</div>
+        <h3>六、机上延误时，你也有明确保障</h3>
+        <p>还有一种最磨人、也最容易让人崩溃的情况：人已经上了飞机，舱门关了，但就是<span class="gold-underline">不起飞。</span></p>
+        <p>根据民航局公开信息，机上延误发生后，承运人应当每<strong>30分钟</strong>向旅客通告延误原因、预计延误时间等航班动态。</p>
+        <p>同时，在不影响航空安全的前提下，机上盥洗室应保证正常使用；机上延误超过<strong>2小时（含）</strong>，应为旅客提供饮用水和食品；机上延误超过<strong>3小时（含）</strong>且没有明确起飞时间的，应在不违反航空安全和安保规定的情况下，安排旅客<span class="key">下飞机等待。</span></p>
+
+        <figure>
+          <img src="./assets/figure-3-onboard-delay.png" alt="机上延误时的关键时间节点图">
+          <figcaption>人在飞机上，不等于权益就暂停了。30分钟、2小时、3小时，这三个节点特别值得记住。</figcaption>
+        </figure>
+
+        <div class="section-anchor">最后记住这6步</div>
+        <h3>七、延误后最实用的处理顺序，就是这6步</h3>
+        <p>如果你下次真的遇到延误，最建议按这个顺序来：<span class="gold-underline">先看通知，再办退改，再问食宿，再开证明，再留证据。</span></p>
+        <ul class="checklist">
+          <li><strong>先看官方通知。</strong> 确认航班有没有正式延误或取消信息，以及原因是什么。</li>
+          <li><strong>再问退改签。</strong> 别只问能不能改，要问清楚是免费改期、签转，还是按票规处理。</li>
+          <li><strong>再问食宿安排。</strong> 尤其是晚间延误、跨夜和异地经停时，这一步很关键。</li>
+          <li><strong>需要就开证明。</strong> 报销、理赔、请假、后续沟通，很多时候都靠它。</li>
+          <li><strong>把证据留全。</strong> 票面、短信、截图、广播通知、沟通记录，都别丢。</li>
+          <li><strong>如果人在机上，盯住关键节点。</strong> 30分钟动态、2小时水食、3小时无明确起飞时间。</li>
+        </ul>
+
+        <figure>
+          <img src="./assets/closing-checklist.png" alt="航班延误后最实用的处理顺序收藏海报">
+          <figcaption>真正有用的，不是只会问一句“赔不赔”，而是知道接下来先做哪一步。</figcaption>
+        </figure>
+
+        <div class="closing-box">
+          <p>💬 你有没有遇到过特别崩溃的一次航班延误？欢迎在评论区分享👇</p>
+          <p>💬 有乘机问题，评论区留言，我挑典型问题写文章解答！</p>
+          <p>✈️ 祝你每次飞行都顺利！</p>
+        </div>
+
+        <p class="note">本文依据中国民用航空局公开《航空旅行常识》《航班正常管理规定》及《航班延误取消原因确认工作程序》整理。不同航空公司在补偿标准、具体客票处理和服务细节上可能存在差异，具体请以当次航班所属航空公司实时规则和客服答复为准。</p>
+      </article>
+    </section>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <div class="toolbar">
+    <div class="toolbar-inner">
+      <button id="copy-title">复制标题</button>
+      <button id="copy-summary" class="warm">复制摘要</button>
+      <button id="copy-body" class="primary">复制正文</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const title = '飞机延误时，你真正有的6项权益，一篇讲清';
+      const summary = '航班延误后，很多人最先问的是“能赔多少”。但真正更值得先弄清楚的，是信息通知、退改签、食宿安排、延误证明和机上延误保障。这篇按照民航局公开规则，把旅客最常用、也最容易误解的权益一次讲清楚。';
+      const body = document.getElementById('article-body');
+      const status = document.getElementById('status');
+
+      async function copy(text, label) {
+        try {
+          await navigator.clipboard.writeText(text);
+          status.textContent = label + '已复制';
+          status.classList.add('show');
+          clearTimeout(window.__statusTimer);
+          window.__statusTimer = setTimeout(() => status.classList.remove('show'), 1600);
+        } catch (err) {
+          status.textContent = '复制失败，请手动复制';
+          status.classList.add('show');
+          clearTimeout(window.__statusTimer);
+          window.__statusTimer = setTimeout(() => status.classList.remove('show'), 1600);
+        }
+      }
+
+      document.getElementById('copy-title').addEventListener('click', () => copy(title, '标题'));
+      document.getElementById('copy-summary').addEventListener('click', () => copy(summary, '摘要'));
+      document.getElementById('copy-body').addEventListener('click', () => copy(body.innerText, '正文'));
+    })();
+  </script>
+</body>
+</html>

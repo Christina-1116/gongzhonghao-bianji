@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>微信公众号粘贴版｜飞机上的5个冷知识</title>
+  <style>
+    :root {
+      --bg: #eef5fd;
+      --paper: rgba(255, 255, 255, 0.96);
+      --ink: #18314f;
+      --soft: #617795;
+      --line: #d8e5f3;
+      --blue: #1f5ea8;
+      --blue-deep: #153f76;
+      --orange: #ff7a1a;
+      --shadow: 0 18px 60px rgba(16, 52, 102, 0.10);
+      --serif: "Source Han Serif SC", "Noto Serif SC", "Songti SC", "STSong", serif;
+      --sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --mono: "SF Mono", "JetBrains Mono", "Menlo", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top right, rgba(156, 205, 255, 0.42), transparent 28%),
+        radial-gradient(circle at top left, rgba(255, 170, 108, 0.14), transparent 24%),
+        linear-gradient(180deg, #eaf2fb 0%, var(--bg) 36%, #f7fbff 100%);
+      color: var(--ink);
+      font: 16px/1.9 var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: min(980px, calc(100vw - 24px));
+      margin: 18px auto 56px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid rgba(216, 229, 243, 0.95);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .header {
+      position: relative;
+      overflow: hidden;
+      padding: 28px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,250,255,0.98)),
+        linear-gradient(90deg, rgba(31,94,168,0.05), rgba(255,122,26,0.05));
+    }
+
+    .header::after {
+      content: "";
+      position: absolute;
+      right: -60px;
+      top: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(111,177,243,0.20), rgba(111,177,243,0));
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--soft);
+      font: 700 11px/1.2 var(--mono);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(31,94,168,0.2), rgba(31,94,168,0.8));
+    }
+
+    .title {
+      max-width: 760px;
+      margin: 16px 0 10px;
+      font: 700 42px/1.16 var(--serif);
+      letter-spacing: -0.03em;
+      color: var(--blue-deep);
+    }
+
+    .title .accent {
+      color: var(--orange);
+    }
+
+    .subtitle {
+      max-width: 740px;
+      margin: 0;
+      color: var(--soft);
+      font-size: 17px;
+    }
+
+    .hero {
+      padding: 16px;
+    }
+
+    .hero img,
+    .article img {
+      width: 100%;
+      display: block;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+    }
+
+    .checklist {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .checklist li {
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff, #f8fbff);
+    }
+
+    .checklist strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--blue);
+      font-size: 14px;
+    }
+
+    .article-wrap {
+      padding: 30px;
+    }
+
+    .article {
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    .article-title {
+      margin: 0 0 14px;
+      text-align: center;
+      font: 700 38px/1.22 var(--serif);
+      letter-spacing: -0.03em;
+      color: var(--blue-deep);
+    }
+
+    .article-deck {
+      margin: 0 0 20px;
+      text-align: center;
+      color: var(--soft);
+      font-size: 17px;
+    }
+
+    .divider {
+      width: 92px;
+      height: 4px;
+      margin: 0 auto 26px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #9bc6f5, #1f5ea8 62%, #ff7a1a);
+    }
+
+    .lead-box {
+      margin: 0 0 24px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      border: 1px solid #d6e4f4;
+      background: linear-gradient(135deg, rgba(31,94,168,0.07), rgba(255,122,26,0.07));
+      color: var(--blue-deep);
+      font: 700 23px/1.65 var(--serif);
+    }
+
+    .article p {
+      margin: 0 0 18px;
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 2;
+    }
+
+    .article figure {
+      margin: 28px 0 32px;
+    }
+
+    .article figcaption {
+      margin-top: 12px;
+      color: #7387a3;
+      font-size: 14px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .section-anchor {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 32px 0 12px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #f7fbff, #edf5ff);
+      border: 1px solid var(--line);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .section-anchor::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--orange);
+      box-shadow: 0 0 0 4px rgba(255, 122, 26, 0.18);
+    }
+
+    .article h3 {
+      margin: 12px 0 16px;
+      font: 700 30px/1.32 var(--serif);
+      color: var(--blue-deep);
+    }
+
+    .gold-underline {
+      font-weight: 700;
+      background-image: linear-gradient(transparent 65%, rgba(255, 188, 109, 0.48) 0);
+      background-repeat: no-repeat;
+    }
+
+    .key {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    blockquote {
+      margin: 24px 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--orange);
+      border-radius: 0 18px 18px 0;
+      background: linear-gradient(180deg, #fff9f4, #fffdf9);
+      color: #9b5312;
+      font: 700 24px/1.62 var(--serif);
+    }
+
+    .summary-box,
+    .tip-box,
+    .closing-box {
+      margin: 22px 0;
+      padding: 18px 20px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #fbfdff, #f4f9ff);
+    }
+
+    .summary-box strong,
+    .tip-box strong,
+    .closing-box strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--blue);
+    }
+
+    .closing-box {
+      background: linear-gradient(180deg, #fafffd, #eef9f5);
+      border-color: #d5eadf;
+    }
+
+    .hook-list {
+      margin: 16px 0 24px;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .hook-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--soft);
+      font-size: 15px;
+    }
+
+    .hook-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, var(--orange), #ffb56d);
+    }
+
+    .note {
+      margin-top: 24px;
+      color: #6f819b;
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    @media (max-width: 720px) {
+      .title { font-size: 34px; }
+      .article-title { font-size: 30px; }
+      .article h3 { font-size: 24px; }
+      .lead-box, blockquote { font-size: 21px; }
+      .article-wrap, .header { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="card article-wrap">
+      <article id="article-body" class="article">
+        <img src="./assets/cover.png" alt="飞机上的5个冷知识封面图">
+
+        <p>很多人坐飞机时，脑子里都会突然冒出一些问题：<span class="gold-underline">飞机这么重，为什么还能飞起来？机上的热水到底能不能喝？厕所冲掉的东西，又去了哪里？</span></p>
+        <p>这些问题听起来像“冷知识”，但它们并不只是拿来聊天的。很多时候，真正让人紧张的，不是飞机本身，而是<span class="key">你不知道眼前发生的事到底正不正常。</span></p>
+        <p>而飞机上很多看起来“神秘”的设计，背后其实都不是玄学，而是很朴素的逻辑：<span class="gold-underline">安全、压力、重量、维护，以及让飞机在万米高空里尽量稳定地工作。</span></p>
+
+        <div class="lead-box">飞机上的很多“奇怪设计”，不是为了神秘感，而是为了让你在万米高空里更安全、更稳定，也更少出故障。</div>
+
+        <ul class="hook-list">
+          <li>很多你以为“有点吓人”的现象，其实恰恰说明系统正在正常工作。</li>
+          <li>很多你以为只是“设计偏好”的细节，背后其实是反复验证过的安全逻辑。</li>
+          <li>看懂这些后，下次飞行时的很多小紧张，会自动少一半。</li>
+        </ul>
+
+        <blockquote>飞机不神秘，它只是把空气动力、压力控制和设备维护，做得比地面交通更极致。</blockquote>
+
+        <div class="section-anchor">先讲最核心的</div>
+        <h3>一、飞机为什么能飞起来，不是“翅膀一扇”那么简单</h3>
+        <p>飞机能飞，靠的不是“轻”，更不是像鸟一样扇翅膀，而是四个力量一起工作：<span class="key">发动机提供向前的推力，机翼制造向上的升力，重力把飞机往下拉，空气阻力拖着它往后。</span></p>
+        <p>当飞机高速向前时，机翼周围的气流会被重新分配，机翼把空气向下偏转，同时自身获得向上的反作用力；再配合合适的迎角，升力就会逐渐大到足以把整架飞机托起来。</p>
+        <p>所以“飞机为什么能飞”这件事，本质上不是魔法，而是<span class="gold-underline">发动机负责把飞机推快，机翼负责把速度变成升力。</span></p>
+
+        <figure>
+          <img src="./assets/figure-1-flight-principles.png" alt="飞机飞行时升力推力重力阻力四个力量示意图">
+          <figcaption>飞机不是“飘起来”的，而是在推力、升力、重力和阻力之间找到一个稳定平衡。</figcaption>
+        </figure>
+
+        <div class="summary-box">
+          真正值得记住的一句是：<span class="gold-underline">飞机靠稳定的空气动力飞行，不是靠运气。</span> 所以正常颠簸并不等于“升力突然没了”。
+        </div>
+
+        <div class="section-anchor">你手里的那杯热水</div>
+        <h3>二、飞机上的热水能不能喝，答案更接近“能用，但更稳妥的选择是瓶装水”</h3>
+        <p>飞机上的热水，一般不是凭空“烧出来”的，它来自机上的饮用水系统，地面加注后储存在专用水箱里，再由客舱厨房加热设备加热，用于茶、咖啡和一些热饮服务。</p>
+        <p>从系统设计上说，它属于可供客舱服务使用的饮用水系统；但从乘客体验上说，<span class="key">它的口感、储存时间、管路状态和不同航司的维护细致度，不会像密封瓶装水那样稳定。</span></p>
+        <p>所以如果你只是正常喝茶、咖啡，通常不必把它想得过分可怕；但如果是给婴幼儿冲饮品、拿来送药，或者你本身对水质特别介意，<span class="gold-underline">优先选择未开封的瓶装水，会更稳妥。</span></p>
+
+        <div class="tip-box">
+          “能不能喝”不是最好的问法，真正更实用的问法是：<span class="gold-underline">“我对这杯热水的稳定性要求有多高？”</span>
+        </div>
+
+        <div class="section-anchor">厕所里的那点事</div>
+        <h3>三、飞机厕所冲走的东西，进的是密封污物箱，不会从天上掉下去</h3>
+        <p>飞机厕所和地面家里的厕所不是一套逻辑。它通常用的是<span class="key">真空抽吸系统</span>，用很少的水，把废弃物快速带进机身内的密封污物箱。</p>
+        <p>也就是说，你在客舱里按下冲水按钮后，东西不是“直接排到外面去”，而是被收集在机上的封闭储存系统里，等飞机落地后，再由地面专用车辆统一清运和处理。</p>
+        <p>你偶尔看到厕所里带一点蓝色液体，也不是“神秘药水”，更多是除味、抑菌和帮助系统运作的处理液。真正值得放心的是：<span class="gold-underline">厕所废弃物和客舱饮用水系统，是完全分开的两套系统。</span></p>
+
+        <figure>
+          <img src="./assets/figure-2-water-and-toilet.png" alt="飞机饮用水系统和厕所污物箱两套独立系统示意图">
+          <figcaption>左边是客舱服务用的饮用水系统，右边是厕所真空系统和密封污物箱，它们不是一回事。</figcaption>
+        </figure>
+
+        <div class="section-anchor">圆窗不是为了好看</div>
+        <h3>四、飞机窗为什么总是圆角的，因为高空压力最怕“尖角受力”</h3>
+        <p>飞机飞到高空后，客舱需要增压，这意味着每次飞行，机身和舷窗周围都要反复承受压力变化。如果窗户做成很硬的方角，四个角就容易形成<span class="key">应力集中</span>，长期循环受压时更容易出问题。</p>
+        <p>圆角或椭圆形的窗框，能让受力分布更均匀，所以它不是单纯为了“看起来舒服”，而是为了让结构在长期增压和减压循环里更安全、更耐久。</p>
+        <p>另外，很多人还会注意到舷窗内层有个小孔。那个小孔的作用之一，是帮助多层窗板之间<span class="gold-underline">缓慢平衡压力和减少起雾。</span> 看起来不起眼，实际上也是安全设计的一部分。</p>
+
+        <div class="section-anchor">看起来在抖的机翼</div>
+        <h3>五、机翼为什么会弯、会抖，很多时候恰恰说明它在正常工作</h3>
+        <p>很多人第一次坐靠近机翼的位置，看到机翼在空中有轻微弯曲，心里会一下紧张：是不是要断了？其实恰恰相反，现代客机机翼本来就不是“死硬”的。它被设计成具有一定弹性，遇到气流、载荷变化时，能通过<span class="key">适度弯曲来吸收力量。</span></p>
+        <p>如果机翼完全不弯，反而会把冲击更直接地传回结构本身。你可以把它理解成高空里的“缓冲器”或“弹簧片”：在允许范围内，它会动，正是为了别让整架飞机硬扛所有冲击。</p>
+        <p>所以，正常飞行中看到机翼轻微上下起伏、起飞降落前后伴随襟翼动作听到一些机械声，往往都属于<span class="gold-underline">系统在工作，不是系统在失控。</span></p>
+
+        <figure>
+          <img src="./assets/figure-3-window-and-wing.png" alt="飞机圆角舷窗和机翼弹性弯曲示意图">
+          <figcaption>圆窗是为了分散压力，机翼会弹性弯曲是为了吸收载荷。很多让人紧张的细节，背后其实是安全冗余。</figcaption>
+        </figure>
+
+        <div class="section-anchor">最后记住这5句</div>
+        <h3>六、把这5句记住，下次坐飞机会安心很多</h3>
+        <p>如果把这篇浓缩成最值得收藏的五句话，大概就是下面这些：</p>
+        <ul class="checklist">
+          <li><strong>飞机能飞，不是靠“飘”。</strong> 发动机把飞机推快，机翼把速度变成升力。</li>
+          <li><strong>机上热水不是绝对不能碰。</strong> 但如果你特别在意稳定性，优先瓶装水更稳妥。</li>
+          <li><strong>厕所里的东西不会从天上掉下去。</strong> 它们会进入密封污物箱，落地后统一清运。</li>
+          <li><strong>圆角窗不是审美偏好。</strong> 它的核心作用，是分散受力、减少压力集中。</li>
+          <li><strong>机翼会弯，不一定是坏事。</strong> 很多时候，那正是它在吸收载荷、正常工作。</li>
+        </ul>
+
+        <figure>
+          <img src="./assets/closing-checklist.png" alt="飞机上的5个冷知识收藏清单">
+          <figcaption>很多所谓“飞机冷知识”，最后都会落回同一个答案：它这么设计，是为了更安全、更稳定。</figcaption>
+        </figure>
+
+        <div class="closing-box">
+          <p>💬 你第一次坐飞机时，最想不明白的一件事是什么？欢迎在评论区留言。</p>
+          <p>💬 如果你还想看“登机、行李、中转、选座”这类乘机冷知识，也可以留言，我继续写。</p>
+        </div>
+
+        <p class="note">本文依据通用航空原理、客机常见系统逻辑与公开可验证的行业常识整理，不同机型、不同航空公司的设备细节和客舱服务做法可能存在差异。涉及婴幼儿饮水、送药或特殊健康需求时，优先向乘务员确认，并尽量选择更稳妥的密封瓶装水。</p>
+      </article>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>微信公众号粘贴版｜飞机选座全攻略</title>
+  <style>
+    :root {
+      --bg: #f5f8fc;
+      --paper: #ffffff;
+      --ink: #1f2f46;
+      --soft: #5c6f8d;
+      --line: #dbe5f1;
+      --blue: #1d4f91;
+      --blue-soft: #eef4fb;
+      --shadow: 0 18px 50px rgba(19, 46, 92, 0.08);
+      --serif: "Source Han Serif SC", "Noto Serif SC", "Songti SC", "STSong", serif;
+      --sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --mono: "SF Mono", "JetBrains Mono", "Menlo", monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #eef4fb 0%, var(--bg) 100%);
+      color: var(--ink);
+      font: 16px/1.9 var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    .page {
+      width: min(920px, calc(100vw - 24px));
+      margin: 18px auto 56px;
+      display: grid;
+      gap: 18px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+    .header, .panel { padding: 24px; }
+    .eyebrow {
+      color: var(--soft);
+      font: 700 11px/1.2 var(--mono);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .title {
+      margin: 12px 0 10px;
+      font: 700 38px/1.18 var(--serif);
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      margin: 0;
+      color: var(--soft);
+      font-size: 16px;
+    }
+    .hero { padding: 16px; }
+    .hero img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+    }
+    .panel h2 {
+      margin: 0 0 12px;
+      font: 700 24px/1.25 var(--serif);
+    }
+    .meta-list, .copy-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+    .meta-list li, .copy-list li {
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: #fafcff;
+      border: 1px solid var(--line);
+    }
+    .meta-list strong, .copy-list strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--blue);
+      font-size: 14px;
+    }
+    .article-wrap { padding: 28px; }
+    .article { max-width: 720px; margin: 0 auto; }
+    .article-title {
+      margin: 0 0 14px;
+      text-align: center;
+      font: 700 36px/1.25 var(--serif);
+      letter-spacing: -0.02em;
+    }
+    .article-deck {
+      margin: 0 0 22px;
+      text-align: center;
+      color: var(--soft);
+      font-size: 17px;
+    }
+    .divider {
+      width: 72px;
+      height: 3px;
+      margin: 0 auto 24px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #8cb8ef, #1d4f91);
+    }
+    .article img {
+      width: 100%;
+      margin: 0 0 26px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+    }
+    .article figure { margin: 26px 0 30px; }
+    .article figcaption {
+      margin-top: 12px;
+      color: #7a8ba3;
+      font-size: 14px;
+      line-height: 1.7;
+      text-align: center;
+    }
+    .article p {
+      margin: 0 0 18px;
+      font-size: 17px;
+      line-height: 2;
+      color: var(--ink);
+    }
+    .article h3 {
+      margin: 12px 0 16px;
+      font: 700 28px/1.35 var(--serif);
+      color: var(--blue);
+    }
+    .section-anchor {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 30px 0 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #f5f9ff, #edf4fc);
+      border: 1px solid var(--line);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+    .section-anchor::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #7db4e8;
+      box-shadow: 0 0 0 4px rgba(125, 180, 232, 0.18);
+    }
+    .gold-underline {
+      font-weight: 700;
+      color: var(--ink);
+      background-image: linear-gradient(transparent 68%, rgba(240, 196, 91, 0.45) 0);
+      background-repeat: no-repeat;
+    }
+    .key { color: var(--blue); font-weight: 700; }
+    .mini-pivot {
+      margin: 18px 0 22px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #fbfdff, #f2f7fd);
+      border: 1px dashed #c9dbef;
+      color: var(--blue);
+      font-size: 15px;
+      line-height: 1.85;
+    }
+    .article blockquote {
+      margin: 22px 0;
+      padding: 18px 20px;
+      border-left: 4px solid #7bb2ea;
+      background: var(--blue-soft);
+      border-radius: 0 16px 16px 0;
+      color: var(--blue);
+      font: 700 24px/1.6 var(--serif);
+    }
+    .summary-box, .tip-box {
+      margin: 22px 0;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: #f7fbff;
+      border: 1px solid var(--line);
+    }
+    .summary-box strong, .tip-box strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--blue);
+    }
+    .checklist {
+      margin: 24px 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+    .checklist li {
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: #fbfdff;
+      border: 1px solid var(--line);
+    }
+    .note {
+      margin-top: 22px;
+      color: #6d7e96;
+      font-size: 14px;
+      line-height: 1.85;
+    }
+    .toolbar {
+      position: sticky;
+      bottom: 16px;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .toolbar-inner {
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(219,229,241,0.92);
+      background: rgba(255,255,255,0.92);
+      box-shadow: 0 16px 40px rgba(17, 42, 86, 0.10);
+      backdrop-filter: blur(14px);
+      pointer-events: auto;
+    }
+    .toolbar button {
+      border: 0;
+      border-radius: 999px;
+      padding: 11px 18px;
+      font: 600 14px/1 var(--sans);
+      background: #eef4fb;
+      color: var(--blue);
+      cursor: pointer;
+    }
+    .toolbar button.primary {
+      background: var(--blue);
+      color: white;
+    }
+    .status {
+      position: fixed;
+      left: 50%;
+      bottom: 88px;
+      transform: translateX(-50%) translateY(12px);
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(29,79,145,0.94);
+      color: white;
+      font-size: 13px;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.25s ease;
+      box-shadow: 0 16px 40px rgba(17, 42, 86, 0.16);
+    }
+    .status.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    @media (max-width: 720px) {
+      .title { font-size: 32px; }
+      .article-title { font-size: 30px; }
+      .article h3 { font-size: 24px; }
+      .toolbar-inner { width: calc(100vw - 24px); justify-content: center; }
+      .toolbar button { flex: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="card header">
+      <div class="eyebrow">Wechat Ready Article</div>
+      <h1 class="title">飞机选座全攻略</h1>
+      <p class="subtitle">第二篇成品：含封面、摘要、正文排版和 4 张正文配图，可直接作为公众号发布底稿。</p>
+    </section>
+
+    <section class="card hero">
+      <img src="./assets/seat-selection/seat-cover-guide.png" alt="飞机选座全攻略封面图">
+    </section>
+
+    <section class="card panel">
+      <h2>后台填写信息</h2>
+      <ul class="meta-list">
+        <li>
+          <strong>封面图</strong>
+          使用这张蓝白航空风封面图，适合作为公众号封面，也适合作为正文首图。
+        </li>
+        <li>
+          <strong>标题</strong>
+          选座全攻略：哪里最稳、哪里最吵、哪里能伸腿，一篇讲透
+        </li>
+        <li>
+          <strong>摘要</strong>
+          每次买完机票，最让人纠结的往往不是行李，也不是值机，而是选座。靠窗还是靠过道？前排是不是一定更好？紧急出口到底值不值得加钱？这篇把选座最核心的逻辑一次讲清楚。
+        </li>
+        <li>
+          <strong>配图顺序</strong>
+          首图使用封面图；正文第 2 节后插入“稳、静、宽三类位置图”；正文第 3 节后插入“能避就避的位置图”；正文第 4 节后插入“靠窗 vs 靠过道图”；正文第 5 节后插入“分人群选座图”。
+        </li>
+      </ul>
+    </section>
+
+    <section class="card panel">
+      <h2>复制建议</h2>
+      <ul class="copy-list">
+        <li>
+          <strong>最稳妥的发法</strong>
+          先在公众号后台填标题和摘要，再上传封面图；正文部分直接从下面“正文粘贴版”开始复制。
+        </li>
+        <li>
+          <strong>关于图片</strong>
+          公众号后台最稳的方式是单独上传图片，不要依赖本地路径自动带入。
+        </li>
+        <li>
+          <strong>关于风格</strong>
+          这版已经把节奏、加粗、转折卡和配图位置整理好了，复制时尽量整段操作，避免后台把段落打散。
+        </li>
+      </ul>
+    </section>
+
+    <section class="card article-wrap">
+      <article id="article-body" class="article">
+        <h1 class="article-title">选座全攻略：哪里最稳、哪里最吵、哪里能伸腿</h1>
+        <p class="article-deck">靠窗还是过道？前排还是后排？一篇讲清，下次选座不再盲选</p>
+        <div class="divider"></div>
+
+        <img src="./assets/seat-selection/seat-cover-guide.png" alt="飞机选座全攻略封面图">
+
+        <p>每次买完机票，真正让人卡住很久的，往往不是买不买行李，也不是值不值机，而是选座。</p>
+        <p>靠窗还是靠过道？前排是不是一定更舒服？紧急出口到底值不值得多花钱？<span class="gold-underline">看起来只是点一个座位号，实际纠结的是整段飞行怎么过。</span></p>
+        <p>有人最怕颠，有人最怕吵，有人腿长，最在意能不能伸开；也有人第一次坐飞机，想把窗外风景看个够。问题不是“哪个位置最好”，而是<span class="key">你这趟飞行最想优先解决什么</span>。</p>
+
+        <blockquote>选座的本质，从来不是找完美座位，而是在安静、平稳、宽敞里做取舍。</blockquote>
+
+        <div class="summary-box">
+          <strong>先记住这一句</strong>
+          飞机上的位置没有统一答案。你求稳，就不一定最适合拍照；你求安静，就不一定是腿部空间最大的那一排；你想伸腿，往往就要接受更多规则限制。<span class="gold-underline">先想清楚自己更在意稳、静还是宽，选座会简单很多。</span>
+        </div>
+
+        <div class="section-anchor">第一步不是看座位号，而是先看自己的优先级</div>
+        <h3>一、先记住这句话：选座，不是选“最好”，而是选“最适合你”</h3>
+        <p>很多人一打开座位图，就默认自己在找一个“最值”的位置。但现实是，飞机上的好位置从来不是统一答案。</p>
+        <p>你想要平稳，就不一定能得到最好的拍照视野；你想要安静，可能就要接受价格更高或者离婴儿摇篮位更近；你想要最大腿部空间，也往往意味着规则更多、起降时更受限制。</p>
+        <div class="mini-pivot"><strong>最实用的顺序：</strong><span class="gold-underline">先问自己最怕什么，再去看座位图。</span> 怕颠、怕吵、怕坐久腿难受，三种答案会把你带去完全不同的位置。</div>
+
+        <div class="section-anchor">真正值得优先考虑的位置，其实就三类</div>
+        <h3>二、飞机上最值得优先考虑的位置，其实就三类</h3>
+        <p><span class="key">求稳</span>，优先看机翼附近。这里更接近重心区域，遇到气流时体感通常更柔和一些，适合第一次坐飞机、带老人小孩，或者本身容易晕机的人。</p>
+        <p><span class="key">求静</span>，优先看前排靠窗。前舱通常更安静，人流也更少，适合想补觉、看书，或者整段飞得更轻松的人。</p>
+        <p><span class="key">求腿部空间</span>，优先看紧急出口排。经济舱里最明显的差别就在这里，长途飞行或者个子高的人会觉得非常值，但也要接受更多安全限制，部分航司还会额外收费。</p>
+
+        <figure>
+          <img src="./assets/seat-selection/seat-zone-guide.png" alt="稳、静、宽三类选座思路示意图">
+          <figcaption>先决定你最想要什么，再去看座位图。比记住某个固定座位号更有用。</figcaption>
+        </figure>
+
+        <div class="tip-box">
+          <strong>这一步最容易想错</strong>
+          很多人会同时想要“最稳、最安静、腿还能伸开”。可现实是，这三种体验往往分别落在不同区域。真正高效的选座，不是全都要，而是先把顺序排出来。
+        </div>
+
+        <div class="section-anchor">这几个位置不是一定不能坐，但能避就避</div>
+        <h3>三、这几个位置，真别抱侥幸心理</h3>
+        <p>最后一排最大的问题，不只是靠背调节可能受限，而是整段飞行里更容易被后舱环境不断打断。离厕所近、人流杂、整体体验往往更累。</p>
+        <p>厕所旁边更典型。味道只是表面问题，真正烦的是<span class="gold-underline">你很难真正安静下来</span>。有人排队、有人站着等、门开了又关，整段飞行都容易被切碎。</p>
+        <p>机翼后方的靠窗位也常常让人失望。不是它不能坐，而是如果你本来想看风景、拍云海、拍日落，最后相机里大概率全是机翼。</p>
+
+        <figure>
+          <img src="./assets/seat-selection/seat-avoid-guide.png" alt="能避就避的位置示意图">
+          <figcaption>真正拉低飞行体验的，往往不是一个大问题，而是噪音、人流、视野和活动受限叠在一起。</figcaption>
+        </figure>
+
+        <div class="mini-pivot"><strong>一句提醒：</strong><span class="gold-underline">能避开最后一排、厕所旁和机翼后方靠窗，通常已经躲掉了一大半后悔位。</span></div>
+
+        <div class="section-anchor">靠窗和靠过道，没有标准答案</div>
+        <h3>四、靠窗和靠过道，到底怎么选？</h3>
+        <p>靠窗更适合体验型需求。想看风景、拍照、靠着睡，或者本身容易晕机的人，通常会更喜欢靠窗。尤其是第一次坐飞机，这个位置更有“真正坐上飞机了”的感觉。</p>
+        <p>靠过道更适合功能型需求。长途飞行、需要频繁起身、想随时活动、不想每次去洗手间都跨人，靠过道会明显更省事。</p>
+        <p>真正最不建议主动选的，通常还是中间位。看不到风景，出去不方便，左右都受限制。除非本来就是和家人朋友一起出行，不然它很少会成为让人满意的位置。</p>
+
+        <figure>
+          <img src="./assets/seat-selection/seat-window-aisle-guide.png" alt="靠窗和靠过道需求对比图">
+          <figcaption>靠窗更适合体验感，靠过道更适合行动自由。中间位通常最不值得主动选。</figcaption>
+        </figure>
+
+        <div class="section-anchor">如果你懒得一条条判断，直接按人群选</div>
+        <h3>五、如果你懒得一条条判断，直接按人群选就够了</h3>
+        <p>带老人出行，优先前中段，重点看平稳和少打扰；如果老人起身频繁，过道位会更方便。</p>
+        <p>第一次坐飞机，想要体验感，优先机翼前方靠窗。风景和那种“第一次飞”的感觉，都会更完整。</p>
+        <p>长途出差，优先紧急出口排或过道位。核心不是风景，而是腿和活动自由。容易晕机的人就别纠结，优先机翼附近，能靠窗更好，因为能把视线放远。</p>
+
+        <figure>
+          <img src="./assets/seat-selection/seat-traveler-guide.png" alt="分人群选座建议图">
+          <figcaption>真正好用的选座建议，一定是分人群，而不是只给一个“万能好位置”。</figcaption>
+        </figure>
+
+        <div class="section-anchor">最后这一节最适合收藏</div>
+        <h3>六、选座还有几个很容易被忽略的小细节</h3>
+        <ul class="checklist">
+          <li><strong>同一个座位号，不同机型里可能完全不是一回事。</strong>别只记 31A、17F 这种号码，真正该看的永远是当次航班的座位图。</li>
+          <li><strong>有些看起来好的位置，需要额外付费。</strong>前排、紧急出口排、部分热门靠窗位，在不少航司那里通常不是默认免费位置。</li>
+          <li><strong>夜航不一定天然适合靠窗。</strong>如果你更想休息，而不是看景，夜航更该优先考虑能不能真正睡好，而不是窗边浪漫不浪漫。</li>
+        </ul>
+
+        <h3>七、一句话总结：先想你最怕什么，再选位置</h3>
+        <p>如果你怕晕、怕颠，就优先机翼附近；如果你怕吵、想休息，就优先前排；如果你腿长、飞得久，就优先紧急出口排；如果你是第一次飞、想看风景，就优先机翼前方靠窗。</p>
+        <p><span class="gold-underline">真正有用的，不是背下一堆“哪个位置最好”，而是下次一打开座位图，你能立刻知道自己这趟飞行最在意的是稳、静还是宽。</span></p>
+
+        <div class="tip-box">
+          <strong>文末引导语可直接用</strong>
+          你坐飞机时，选到过特别满意的位置吗？或者有没有哪一次，明明飞行时间不长，却被一个座位坐到后悔？欢迎把你的经验留在评论区，给下一位正在选座的人一点参考。
+        </div>
+
+        <p class="note">本文依据常见民航选座逻辑、公开座位布局信息及不同航司常见服务规则整理。不同机型、不同航司、不同票价舱位下，可选座位、额外付费范围及座位布局可能存在差异，具体请以实际购票页面和当次航班座位图为准。</p>
+      </article>
+    </section>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <div class="toolbar">
+    <div class="toolbar-inner">
+      <button id="copy-title">复制标题</button>
+      <button id="copy-summary">复制摘要</button>
+      <button id="copy-body" class="primary">复制正文</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const title = '选座全攻略：哪里最稳、哪里最吵、哪里能伸腿，一篇讲透';
+      const summary = '每次买完机票，最让人纠结的往往不是行李，也不是值机，而是选座。靠窗还是靠过道？前排是不是一定更好？紧急出口到底值不值得加钱？这篇把选座最核心的逻辑一次讲清楚。';
+      const body = document.getElementById('article-body');
+      const status = document.getElementById('status');
+
+      async function copy(text, label) {
+        try {
+          await navigator.clipboard.writeText(text);
+          status.textContent = label + '已复制';
+          status.classList.add('show');
+          clearTimeout(window.__statusTimer);
+          window.__statusTimer = setTimeout(() => status.classList.remove('show'), 1600);
+        } catch (err) {
+          status.textContent = '复制失败，请手动复制';
+          status.classList.add('show');
+          clearTimeout(window.__statusTimer);
+          window.__statusTimer = setTimeout(() => status.classList.remove('show'), 1600);
+        }
+      }
+
+      document.getElementById('copy-title').addEventListener('click', () => copy(title, '标题'));
+      document.getElementById('copy-summary').addEventListener('click', () => copy(summary, '摘要'));
+      document.getElementById('copy-body').addEventListener('click', () => copy(body.innerText, '正文'));
+    })();
+  </script>
+</body>
+</html>

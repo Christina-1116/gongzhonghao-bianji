@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>微信公众号粘贴版｜买机票最容易被坑的5个地方</title>
+  <style>
+    :root {
+      --bg: #eef5fd;
+      --bg-2: #f8fbff;
+      --paper: rgba(255, 255, 255, 0.96);
+      --ink: #18314f;
+      --soft: #617795;
+      --line: #d8e5f3;
+      --blue: #1f5ea8;
+      --blue-deep: #153f76;
+      --blue-soft: #edf5ff;
+      --orange: #ff7a1a;
+      --orange-soft: #fff3e8;
+      --mint: #eaf9f2;
+      --shadow: 0 18px 60px rgba(16, 52, 102, 0.10);
+      --serif: "Source Han Serif SC", "Noto Serif SC", "Songti SC", "STSong", serif;
+      --sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --mono: "SF Mono", "JetBrains Mono", "Menlo", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top right, rgba(156, 205, 255, 0.42), transparent 28%),
+        radial-gradient(circle at top left, rgba(255, 170, 108, 0.14), transparent 24%),
+        linear-gradient(180deg, #eaf2fb 0%, var(--bg) 36%, #f7fbff 100%);
+      color: var(--ink);
+      font: 16px/1.9 var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: min(980px, calc(100vw - 24px));
+      margin: 18px auto 56px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid rgba(216, 229, 243, 0.95);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .header {
+      position: relative;
+      overflow: hidden;
+      padding: 28px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,250,255,0.98)),
+        linear-gradient(90deg, rgba(31,94,168,0.05), rgba(255,122,26,0.05));
+    }
+
+    .header::after {
+      content: "";
+      position: absolute;
+      right: -60px;
+      top: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(111,177,243,0.20), rgba(111,177,243,0));
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--soft);
+      font: 700 11px/1.2 var(--mono);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(31,94,168,0.2), rgba(31,94,168,0.8));
+    }
+
+    .title {
+      max-width: 760px;
+      margin: 16px 0 10px;
+      font: 700 42px/1.16 var(--serif);
+      letter-spacing: -0.03em;
+      color: var(--blue-deep);
+    }
+
+    .title .accent {
+      color: var(--orange);
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 0;
+      color: var(--soft);
+      font-size: 17px;
+    }
+
+    .hero {
+      padding: 16px;
+    }
+
+    .hero img,
+    .article img {
+      width: 100%;
+      display: block;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+
+    .panel {
+      padding: 24px;
+    }
+
+    .panel h2 {
+      margin: 0 0 14px;
+      font: 700 24px/1.24 var(--serif);
+      color: var(--blue-deep);
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #fbfdff, #eef5ff);
+      border: 1px solid var(--line);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .meta-list,
+    .copy-list,
+    .quick-list,
+    .checklist {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .meta-list li,
+    .copy-list li,
+    .quick-list li,
+    .checklist li {
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff, #f8fbff);
+    }
+
+    .meta-list strong,
+    .copy-list strong,
+    .quick-list strong,
+    .checklist strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--blue);
+      font-size: 14px;
+    }
+
+    .summary-band {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      padding: 18px;
+    }
+
+    .summary-item {
+      padding: 16px 14px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #ffffff, #f4f9ff);
+      border: 1px solid var(--line);
+    }
+
+    .summary-item b {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--blue-deep);
+      font-size: 15px;
+    }
+
+    .summary-item span {
+      color: var(--soft);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .article-wrap {
+      padding: 30px;
+    }
+
+    .article {
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    .article-title {
+      margin: 0 0 14px;
+      text-align: center;
+      font: 700 38px/1.22 var(--serif);
+      letter-spacing: -0.03em;
+      color: var(--blue-deep);
+    }
+
+    .article-deck {
+      margin: 0 0 20px;
+      text-align: center;
+      color: var(--soft);
+      font-size: 17px;
+    }
+
+    .divider {
+      width: 92px;
+      height: 4px;
+      margin: 0 auto 26px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #9bc6f5, #1f5ea8 62%, #ff7a1a);
+    }
+
+    .lead-box {
+      margin: 0 0 24px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      border: 1px solid #d6e4f4;
+      background: linear-gradient(135deg, rgba(31,94,168,0.07), rgba(255,122,26,0.07));
+      color: var(--blue-deep);
+      font: 700 23px/1.65 var(--serif);
+    }
+
+    .article p {
+      margin: 0 0 18px;
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 2;
+    }
+
+    .article figure {
+      margin: 28px 0 32px;
+    }
+
+    .article figcaption {
+      margin-top: 12px;
+      color: #7387a3;
+      font-size: 14px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .section-anchor {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 32px 0 12px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #f7fbff, #edf5ff);
+      border: 1px solid var(--line);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .section-anchor::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--orange);
+      box-shadow: 0 0 0 4px rgba(255, 122, 26, 0.18);
+    }
+
+    .article h3 {
+      margin: 12px 0 16px;
+      font: 700 30px/1.32 var(--serif);
+      color: var(--blue-deep);
+    }
+
+    .gold-underline {
+      font-weight: 700;
+      background-image: linear-gradient(transparent 65%, rgba(255, 188, 109, 0.48) 0);
+      background-repeat: no-repeat;
+    }
+
+    .key {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    blockquote {
+      margin: 24px 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--orange);
+      border-radius: 0 18px 18px 0;
+      background: linear-gradient(180deg, #fff9f4, #fffdf9);
+      color: #9b5312;
+      font: 700 24px/1.62 var(--serif);
+    }
+
+    .summary-box,
+    .tip-box,
+    .closing-box {
+      margin: 22px 0;
+      padding: 18px 20px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #fbfdff, #f4f9ff);
+    }
+
+    .summary-box strong,
+    .tip-box strong,
+    .closing-box strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--blue);
+    }
+
+    .closing-box {
+      background: linear-gradient(180deg, #fafffd, #eef9f5);
+      border-color: #d5eadf;
+    }
+
+    .hook-list {
+      margin: 16px 0 24px;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .hook-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--soft);
+      font-size: 15px;
+    }
+
+    .hook-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, var(--orange), #ffb56d);
+    }
+
+    .note {
+      margin-top: 24px;
+      color: #6f819b;
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .toolbar {
+      position: sticky;
+      bottom: 16px;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .toolbar-inner {
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(216,229,243,0.96);
+      background: rgba(255,255,255,0.94);
+      box-shadow: 0 16px 40px rgba(18, 45, 93, 0.14);
+      backdrop-filter: blur(14px);
+      pointer-events: auto;
+    }
+
+    .toolbar button {
+      border: 0;
+      border-radius: 999px;
+      padding: 11px 18px;
+      font: 600 14px/1 var(--sans);
+      cursor: pointer;
+      background: #edf5ff;
+      color: var(--blue);
+    }
+
+    .toolbar button.primary {
+      background: linear-gradient(90deg, var(--blue), #2d6ec0);
+      color: white;
+    }
+
+    .toolbar button.warm {
+      background: linear-gradient(90deg, #fff1e4, #ffe7d5);
+      color: #bb5a11;
+    }
+
+    .status {
+      position: fixed;
+      left: 50%;
+      bottom: 88px;
+      transform: translateX(-50%) translateY(12px);
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(31,94,168,0.96);
+      color: white;
+      font-size: 13px;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.25s ease;
+      box-shadow: 0 16px 40px rgba(18, 45, 93, 0.18);
+    }
+
+    .status.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    @media (max-width: 860px) {
+      .grid,
+      .summary-band {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .title { font-size: 34px; }
+      .article-title { font-size: 30px; }
+      .article h3 { font-size: 24px; }
+      .lead-box, blockquote { font-size: 21px; }
+      .toolbar-inner { width: calc(100vw - 24px); justify-content: center; }
+      .toolbar button { flex: 1; }
+      .article-wrap, .panel, .header { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="card header">
+      <div class="eyebrow">Wechat Ready Article</div>
+      <h1 class="title">买机票最容易被坑的<span class="accent">5个地方</span>，排好版可直接发</h1>
+      <p class="subtitle">这版按“成熟公众号成稿”处理好了：标题、摘要、正文节奏、配图顺序、文末海报都已对齐，适合直接复制到公众号后台再上传图片。</p>
+    </section>
+
+    <section class="card hero">
+      <img src="./assets/ticket-pitfalls/cover.png" alt="买机票最容易被坑的5个地方封面图">
+    </section>
+
+    <section class="card summary-band">
+      <div class="summary-item">
+        <b>坑 1</b>
+        <span>只盯低价，不看行李额度，结果越买越贵。</span>
+      </div>
+      <div class="summary-item">
+        <b>坑 2</b>
+        <span>中转卡太紧，前段一延误，后段直接作废。</span>
+      </div>
+      <div class="summary-item">
+        <b>坑 3</b>
+        <span>退改规则没细看，需要变动时才发现代价最高。</span>
+      </div>
+      <div class="summary-item">
+        <b>坑 4</b>
+        <span>默认勾选一堆附加服务，小钱累积成大钱。</span>
+      </div>
+      <div class="summary-item">
+        <b>坑 5</b>
+        <span>第三方页面看着便宜，结算时却一路加价。</span>
+      </div>
+    </section>
+
+    <section class="grid">
+      <section class="card panel">
+        <h2>后台填写信息</h2>
+        <div class="chip-row">
+          <div class="chip">封面已生成</div>
+          <div class="chip">5 张文内图</div>
+          <div class="chip">1 张文末海报</div>
+        </div>
+        <ul class="meta-list">
+          <li>
+            <strong>建议标题</strong>
+            买机票最容易被坑的5个地方，看完省下好几百
+          </li>
+          <li>
+            <strong>建议摘要</strong>
+            机票不是买得越便宜越划算。很多人真正多花的钱，都藏在行李额度、中转时间、退改规则和默认附加服务里。这篇把买机票最容易踩的5个坑一次讲清楚。
+          </li>
+          <li>
+            <strong>配图顺序</strong>
+            首图放封面图；正文第 1 到第 5 节后依次放对应插图；正文结尾放“买机票前必看清单”收尾海报。
+          </li>
+          <li>
+            <strong>适合的风格</strong>
+            蓝白航空风，信息感强，兼顾爆款标题气质和专业可信感。
+          </li>
+        </ul>
+      </section>
+
+      <section class="card panel">
+        <h2>复制建议</h2>
+        <ul class="copy-list">
+          <li>
+            <strong>最稳妥的发法</strong>
+            先在公众号后台填写标题和摘要，再上传封面图；正文从下方“正文粘贴版”开始整段复制。
+          </li>
+          <li>
+            <strong>关于图片</strong>
+            图片建议在后台单独上传并插入对应位置，不要依赖本地路径自动带入。
+          </li>
+          <li>
+            <strong>关于格式</strong>
+            这版已经把节奏、加粗、转折和结尾互动位都整理好了，复制时尽量整块操作，避免段落被后台拆散。
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="card panel">
+      <h2>文章钩子</h2>
+      <ul class="quick-list">
+        <li>
+          <strong>这篇最强的一句</strong>
+          便宜，不一定真省钱；贵，也不一定就是坑。真正要盯住的，是那些看起来没问题、其实最容易多花钱的地方。
+        </li>
+        <li>
+          <strong>适合做加粗的句子</strong>
+          真正省钱的买法，不是选最便宜的那张票，而是选把规则看清之后，总价最低的那张票。
+        </li>
+        <li>
+          <strong>适合评论区互动的句子</strong>
+          你买机票时踩过什么坑？欢迎留言分享，让更多人少走弯路。
+        </li>
+      </ul>
+    </section>
+
+    <section class="card article-wrap">
+      <article id="article-body" class="article">
+        <h1 class="article-title">买机票最容易被坑的5个地方，看完省下好几百</h1>
+        <p class="article-deck">不是越便宜越划算，真正贵的，常常是那些你下单时没仔细看的规则</p>
+        <div class="divider"></div>
+
+        <img src="./assets/ticket-pitfalls/cover.png" alt="买机票最容易被坑的5个地方封面图">
+
+        <p>每到出行旺季，机票价格就像过山车。</p>
+        <p>有人提前一个月买，结果临出发前一周发现更便宜；也有人为了省一百多块选了中转，最后第一程一延误，第二程直接赶不上，重新买票反而多花一千多。</p>
+        <p>很多人买机票，不是输在运气不好，而是踩中了几个<span class="gold-underline">本来完全可以避开的坑</span>。</p>
+
+        <div class="lead-box">便宜，不一定真省钱；贵，也不一定就是坑。真正要盯住的，是那些看起来没问题、其实最容易让你一路加钱的地方。</div>
+
+        <ul class="hook-list">
+          <li>看上去很低的票价，可能根本不含你真正需要的服务。</li>
+          <li>省下的一点点差价，可能在行李、中转、退改和附加服务上全吐回去。</li>
+          <li>真正划算的票，不是最便宜的，而是把规则看清之后，总价最低的那张。</li>
+        </ul>
+
+        <blockquote>买机票最怕的，不是贵，而是你以为自己买得很划算，结果一路都在额外付钱。</blockquote>
+
+        <div class="section-anchor">第一个坑最常见，也最容易被忽视</div>
+        <h3>一、只看总价，不看行李额度</h3>
+        <p>这是很多人最容易中招的一种。</p>
+        <p>买票时，看到低价就立刻下单，付完钱才突然想起来：<span class="key">这张票到底有没有免费托运行李？</span></p>
+        <p>低成本航空尤其明显。票价看起来可能比全服务航司便宜三五百，但托运行李要另外买，选座要另外买，有时连餐食都要额外付费。算到最后，表面便宜，实际更贵。</p>
+        <p>更麻烦的是，有些人到了机场才发现自己需要托运。现场补买行李额度，往往比提前购买贵得多。</p>
+
+        <figure>
+          <img src="./assets/ticket-pitfalls/figure-1-baggage.png" alt="只看总价不看行李额度示意图">
+          <figcaption>票面价格只是第一眼看到的数字，真正决定总花费的，是后面一项项补进去的费用。</figcaption>
+        </figure>
+
+        <div class="summary-box">
+          <strong>买票前先看这四项</strong>
+          有没有免费托运行李额度、手提行李限重多少、选座是否额外收费、餐食是否包含在票价里。<span class="gold-underline">这四项加起来，才是真正的总价。</span>
+        </div>
+
+        <div class="section-anchor">第二个坑，常常是为了省一点点，最后亏一大截</div>
+        <h3>二、中转时间卡得太紧</h3>
+        <p>有些人为了省几十块，会选那种中转时间只有四五十分钟的票。</p>
+        <p>看上去很聪明：少在机场等，早点到目的地。但现实是，只要第一程稍微延误，后面的衔接就会瞬间变得危险。</p>
+        <p>尤其是换航站楼、重新安检、国际转国内、需要过边检海关的情况，时间往往根本不够。</p>
+        <p>如果是同一家航司或联程票，通常还有改签保障；但如果是自己分开买的两张票，第二程赶不上，损失往往得自己承担。</p>
+
+        <figure>
+          <img src="./assets/ticket-pitfalls/figure-2-transfer.png" alt="中转时间卡太紧示意图">
+          <figcaption>多等几十分钟，通常都比临时重买下一程机票便宜得多。</figcaption>
+        </figure>
+
+        <div class="tip-box">
+          <strong>更稳妥的时间建议</strong>
+          国内转国内，建议至少预留 1.5 小时；国际转国内，或者需要过边检海关，建议至少预留 2 小时以上。<span class="gold-underline">中转不是越短越高级，安全衔接才是真的省钱。</span>
+        </div>
+
+        <div class="section-anchor">第三个坑，平时不看，一旦要用就最痛</div>
+        <h3>三、退改签规则没看清</h3>
+        <p>买票时，很多人都不会点开“退改签说明”。</p>
+        <p>但真正要改签、退票的时候，才发现这张票的规则，跟自己想象的完全不一样。</p>
+        <p>一般来说，票价越便宜，限制越多；折扣越深，退改成本越高。有些特价票起飞前改签就要收费，有些票起飞后甚至不能退、不能改。</p>
+        <p>更需要注意的是，<span class="key">不同渠道买的票，退改体验也可能完全不一样。</span> 官方渠道通常更透明；部分第三方平台则可能附带额外服务包，或者在退改流程上多一道手续。</p>
+
+        <figure>
+          <img src="./assets/ticket-pitfalls/figure-3-refund.png" alt="退改签规则没看清示意图">
+          <figcaption>很多麻烦，都是买的时候嫌麻烦，最后在退改的时候成倍补回来。</figcaption>
+        </figure>
+
+        <div class="summary-box">
+          <strong>买票前就值这 30 秒</strong>
+          下单前，点开退改签说明看一眼。尤其是你行程还不完全确定的时候，这一步能帮你避开很多后续成本。
+        </div>
+
+        <div class="section-anchor">第四个坑，不是不能买，而是别默认全买</div>
+        <h3>四、保险和贵宾厅，不是每次都需要</h3>
+        <p>结算页面最后一步，经常会默认勾选一堆附加服务：航空意外险、延误险、贵宾厅优惠券、接送机券、服务包……</p>
+        <p>这里面不是所有东西都没用，而是<span class="gold-underline">不是每一趟出行都需要</span>。</p>
+        <p>比如延误险，如果你经常飞、或者航线本身延误概率高，确实可能划算；但有些附加服务，你可能根本用不上，或者自己单独买反而更便宜。</p>
+        <p>贵宾厅就是典型例子。很多人买了券，结果到了机场发现航班在远机位，流程很赶，最后根本没进去。</p>
+
+        <figure>
+          <img src="./assets/ticket-pitfalls/figure-4-insurance.png" alt="保险和贵宾厅不是每次都需要示意图">
+          <figcaption>真正划算的附加服务，不是默认勾选的那几个，而是你这趟行程真能用上的那几个。</figcaption>
+        </figure>
+
+        <div class="tip-box">
+          <strong>结算前最后做一件事</strong>
+          把每一个默认勾选项逐个看一遍。需要的留下，不需要的取消。<span class="gold-underline">一趟只差三五十，一年飞十几次，就是一笔不小的支出。</span>
+        </div>
+
+        <div class="section-anchor">第五个坑，看起来最便宜，最后常常最不便宜</div>
+        <h3>五、第三方平台的“低价陷阱”</h3>
+        <p>有些人习惯在第三方平台买票，因为页面看起来更便宜。</p>
+        <p>但你看到的低价，未必是你最后支付的价格。</p>
+        <p>有些平台展示的是“裸票价”：不含行李、不含选座、不含餐食。等你进入结算页，费用一项项往上加，最后总价反而比官网还高。</p>
+        <p>还有一些平台会默认捆绑服务，字很小、位置不显眼，稍不注意就一起买进去了。买的时候方便，退的时候却往往更麻烦。</p>
+
+        <figure>
+          <img src="./assets/ticket-pitfalls/figure-5-platform.png" alt="第三方平台低价陷阱示意图">
+          <figcaption>不是第三方平台不能用，而是页面低价不等于最终实付低价。</figcaption>
+        </figure>
+
+        <div class="summary-box">
+          <strong>真正该确认的四件事</strong>
+          票面价格到底包含什么、有没有免费行李额度、退改规则是什么、有没有额外捆绑服务。<span class="gold-underline">这几件确认没问题，再付款也不迟。</span>
+        </div>
+
+        <div class="section-anchor">这张图最适合留在结尾，顺手收藏</div>
+        <h3>六、真正省钱的买法，不是选最便宜，而是看清规则之后再下单</h3>
+        <p>说到底，买机票最怕的不是贵，而是<span class="key">你以为自己买得很划算，结果一路都在额外付钱</span>。</p>
+        <p>真正省钱的买法，从来不是选最便宜的那张票，而是选那张：把规则看清之后，最终总价最低、出行风险也最低的票。</p>
+
+        <figure>
+          <img src="./assets/ticket-pitfalls/closing-checklist.png" alt="买机票前必看清单总结海报">
+          <figcaption>买票前花一分钟对照一遍，通常比事后补救省心得多。</figcaption>
+        </figure>
+
+        <div class="closing-box">
+          <strong>文末互动语可直接用</strong>
+          你买机票时踩过什么坑？是行李费、是中转时间、还是第三方平台隐藏加价？欢迎在评论区分享，让更多人少走弯路。
+        </div>
+
+        <p class="note">本文依据常见购票规则与公开票务信息整理。不同航空公司、不同航线、不同票价产品的规则可能存在差异，具体请以购票页面实时显示为准。</p>
+      </article>
+    </section>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <div class="toolbar">
+    <div class="toolbar-inner">
+      <button id="copy-title">复制标题</button>
+      <button id="copy-summary" class="warm">复制摘要</button>
+      <button id="copy-body" class="primary">复制正文</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const title = '买机票最容易被坑的5个地方，看完省下好几百';
+      const summary = '机票不是买得越便宜越划算。很多人真正多花的钱，都藏在行李额度、中转时间、退改规则和默认附加服务里。这篇把买机票最容易踩的5个坑一次讲清楚。';
+      const body = document.getElementById('article-body');
+      const status = document.getElementById('status');
+
+      async function copy(text, label) {
+        try {
+          await navigator.clipboard.writeText(text);
+          status.textContent = label + '已复制';
+          status.classList.add('show');
+          clearTimeout(window.__statusTimer);
+          window.__statusTimer = setTimeout(() => status.classList.remove('show'), 1600);
+        } catch (err) {
+          status.textContent = '复制失败，请手动复制';
+          status.classList.add('show');
+          clearTimeout(window.__statusTimer);
+          window.__statusTimer = setTimeout(() => status.classList.remove('show'), 1600);
+        }
+      }
+
+      document.getElementById('copy-title').addEventListener('click', () => copy(title, '标题'));
+      document.getElementById('copy-summary').addEventListener('click', () => copy(summary, '摘要'));
+      document.getElementById('copy-body').addEventListener('click', () => copy(body.innerText, '正文'));
+    })();
+  </script>
+</body>
+</html>

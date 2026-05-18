@@ -1,0 +1,169 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="32" x2="1480" y2="1160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FCFEFF"/>
+      <stop offset="1" stop-color="#EEF5FD"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F7FBFF"/>
+    </linearGradient>
+    <filter id="shadow" x="22" y="22" width="1556" height="1156" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="26" stdDeviation="28" flood-color="#16396F" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1200" rx="34" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="34" y="34" width="1532" height="1132" rx="32" fill="white" fill-opacity="0.92"/>
+  </g>
+
+  <text x="84" y="154" fill="#173A72" font-size="86" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">选座全攻略</text>
+  <text x="86" y="228" fill="#173A72" font-size="54" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">哪里最稳、哪里最吵、哪里能伸腿</text>
+  <text x="88" y="286" fill="#6781A0" font-size="24" font-family="PingFang SC, Microsoft YaHei, sans-serif">先想清楚你更怕颠、怕吵，还是怕腿伸不开；选座本质上是在“稳、静、宽”里做取舍。</text>
+
+  <g>
+    <rect x="1176" y="72" width="318" height="236" rx="28" fill="#F7FBFF" stroke="#DCE8F6" stroke-width="2"/>
+    <rect x="1266" y="102" width="138" height="160" rx="32" fill="#DCECFB"/>
+    <rect x="1288" y="126" width="94" height="114" rx="28" fill="#2D5EA3"/>
+    <rect x="1304" y="148" width="62" height="70" rx="20" fill="#FFFFFF"/>
+    <path d="M1320 148C1320 118 1342 96 1363 96C1387 96 1408 118 1408 148" stroke="#B7D7F1" stroke-width="14" stroke-linecap="round"/>
+    <text x="1222" y="284" fill="#173A72" font-size="28" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">打开座位图前先决定</text>
+    <text x="1234" y="318" fill="#6883A3" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif">你更想要稳、静，还是宽</text>
+  </g>
+
+  <g>
+    <rect x="66" y="344" width="1468" height="448" rx="30" fill="url(#card)" stroke="#D8E6F4" stroke-width="2"/>
+    <rect x="72" y="364" width="520" height="58" rx="18" fill="#1E57A3"/>
+    <text x="102" y="402" fill="white" font-size="28" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">一、飞机上最值得优先看的三类位置</text>
+
+    <g>
+      <circle cx="112" cy="470" r="22" fill="#28539A"/>
+      <path d="M104 470L121 460L116 470L121 480L104 470Z" fill="white"/>
+      <text x="148" y="474" fill="#173A72" font-size="34" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">最稳的位置：机翼附近</text>
+      <text x="148" y="510" fill="#5C7694" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">机翼更接近重心区域，体感通常更平顺。</text>
+      <g transform="translate(140 540)">
+        <rect x="0" y="0" width="300" height="140" rx="70" fill="#FAFCFF" stroke="#D6E4F3" stroke-width="2"/>
+        <rect x="90" y="20" width="120" height="100" rx="24" fill="#FFFFFF" stroke="#D3E2F1" stroke-width="2"/>
+        <path d="M-8 70H88" stroke="#C8DEEF" stroke-width="12" stroke-linecap="round"/>
+        <path d="M212 70H308" stroke="#C8DEEF" stroke-width="12" stroke-linecap="round"/>
+        <g fill="#DAE7F5">
+          <rect x="108" y="34" width="16" height="20" rx="4"/>
+          <rect x="130" y="34" width="16" height="20" rx="4"/>
+          <rect x="152" y="34" width="16" height="20" rx="4"/>
+          <rect x="174" y="34" width="16" height="20" rx="4"/>
+          <rect x="108" y="60" width="16" height="20" rx="4"/>
+          <rect x="130" y="60" width="16" height="20" rx="4"/>
+          <rect x="152" y="60" width="16" height="20" rx="4"/>
+          <rect x="174" y="60" width="16" height="20" rx="4"/>
+        </g>
+        <rect x="110" y="58" width="80" height="24" rx="8" fill="#35A564"/>
+      </g>
+      <text x="96" y="732" fill="#214F90" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">适合：容易晕机、老人、小孩、第一次坐飞机</text>
+      <text x="96" y="762" fill="#6A84A4" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif">代价：靠窗视野会被机翼挡住一些</text>
+    </g>
+
+    <line x1="532" y1="444" x2="532" y2="770" stroke="#DDE8F3" stroke-width="2"/>
+
+    <g>
+      <circle cx="578" cy="470" r="22" fill="#28539A"/>
+      <path d="M568 462H577V478H568L560 470L568 462Z" fill="white"/>
+      <path d="M588 462H579V478H588L596 470L588 462Z" fill="white"/>
+      <text x="614" y="474" fill="#173A72" font-size="34" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">最安静的位置：前排靠窗</text>
+      <text x="614" y="510" fill="#5C7694" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">越靠前通常越安静，补觉和看书更舒服。</text>
+      <g transform="translate(646 540)">
+        <rect x="0" y="0" width="300" height="140" rx="70" fill="#FAFCFF" stroke="#D6E4F3" stroke-width="2"/>
+        <rect x="88" y="20" width="124" height="100" rx="24" fill="#FFFFFF" stroke="#D3E2F1" stroke-width="2"/>
+        <g fill="#DAE7F5">
+          <rect x="106" y="34" width="16" height="20" rx="4"/>
+          <rect x="128" y="34" width="16" height="20" rx="4"/>
+          <rect x="150" y="34" width="16" height="20" rx="4"/>
+          <rect x="172" y="34" width="16" height="20" rx="4"/>
+          <rect x="106" y="60" width="16" height="20" rx="4"/>
+          <rect x="128" y="60" width="16" height="20" rx="4"/>
+          <rect x="150" y="60" width="16" height="20" rx="4"/>
+          <rect x="172" y="60" width="16" height="20" rx="4"/>
+        </g>
+        <rect x="96" y="34" width="18" height="52" rx="6" fill="#2E77D0"/>
+        <rect x="184" y="34" width="18" height="52" rx="6" fill="#2E77D0"/>
+        <path d="M-16 70H-2" stroke="#87B8E3" stroke-width="8" stroke-linecap="round"/>
+        <path d="M-30 56H-16" stroke="#87B8E3" stroke-width="8" stroke-linecap="round"/>
+        <path d="M302 70H316" stroke="#87B8E3" stroke-width="8" stroke-linecap="round"/>
+        <path d="M316 56H330" stroke="#87B8E3" stroke-width="8" stroke-linecap="round"/>
+      </g>
+      <text x="562" y="732" fill="#214F90" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">优先：前几排靠窗；但要留意婴儿摇篮位</text>
+      <text x="562" y="762" fill="#6A84A4" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif">重点：适合想安静补觉、看书的人</text>
+    </g>
+
+    <line x1="1012" y1="444" x2="1012" y2="770" stroke="#DDE8F3" stroke-width="2"/>
+
+    <g>
+      <circle cx="1058" cy="470" r="22" fill="#28539A"/>
+      <path d="M1052 454H1066C1071 454 1076 459 1076 464V478H1068L1064 470L1058 478H1052V454Z" fill="white"/>
+      <text x="1094" y="470" fill="#173A72" font-size="30" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">最能伸腿：紧急出口排</text>
+      <text x="1094" y="506" fill="#5C7694" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">经济舱里腿部空间最大的一类位置。</text>
+      <g transform="translate(1120 540)">
+        <rect x="0" y="0" width="300" height="140" rx="70" fill="#FAFCFF" stroke="#D6E4F3" stroke-width="2"/>
+        <rect x="88" y="20" width="124" height="100" rx="24" fill="#FFFFFF" stroke="#D3E2F1" stroke-width="2"/>
+        <g fill="#DAE7F5">
+          <rect x="106" y="34" width="16" height="20" rx="4"/>
+          <rect x="128" y="34" width="16" height="20" rx="4"/>
+          <rect x="150" y="34" width="16" height="20" rx="4"/>
+          <rect x="172" y="34" width="16" height="20" rx="4"/>
+          <rect x="106" y="60" width="16" height="20" rx="4"/>
+          <rect x="128" y="60" width="16" height="20" rx="4"/>
+          <rect x="150" y="60" width="16" height="20" rx="4"/>
+          <rect x="172" y="60" width="16" height="20" rx="4"/>
+        </g>
+        <rect x="108" y="58" width="84" height="22" rx="8" fill="#37A967"/>
+        <path d="M-18 74H-6" stroke="#F16E5F" stroke-width="8" stroke-linecap="round"/>
+        <path d="M-32 90L-20 58L-8 90H-32Z" fill="#F16E5F"/>
+        <path d="M306 74H318" stroke="#F16E5F" stroke-width="8" stroke-linecap="round"/>
+        <path d="M320 90L332 58L344 90H320Z" fill="#F16E5F"/>
+      </g>
+      <text x="1040" y="732" fill="#214F90" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">适合：高个子、长途飞行、落地后还要继续赶路的人</text>
+      <text x="1040" y="762" fill="#6A84A4" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif">限制：有安全要求，部分航司需要加价</text>
+    </g>
+  </g>
+
+  <g>
+    <rect x="66" y="826" width="920" height="300" rx="28" fill="#FFFFFF" stroke="#D8E6F4" stroke-width="2"/>
+    <rect x="72" y="846" width="438" height="54" rx="18" fill="#1E57A3"/>
+    <text x="102" y="881" fill="white" font-size="26" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">二、这些位置，能避就尽量避</text>
+    <g>
+      <circle cx="110" cy="956" r="18" fill="#F05C4D"/>
+      <path d="M102 948L118 964" stroke="white" stroke-width="6" stroke-linecap="round"/>
+      <path d="M118 948L102 964" stroke="white" stroke-width="6" stroke-linecap="round"/>
+      <text x="144" y="964" fill="#173A72" font-size="30" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">最后一排</text>
+      <text x="144" y="1006" fill="#6A84A4" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif">靠背更受限，离厕所和后舱人流更近。</text>
+    </g>
+    <g>
+      <circle cx="110" cy="1052" r="18" fill="#F05C4D"/>
+      <path d="M102 1044L118 1060" stroke="white" stroke-width="6" stroke-linecap="round"/>
+      <path d="M118 1044L102 1060" stroke="white" stroke-width="6" stroke-linecap="round"/>
+      <text x="144" y="1060" fill="#173A72" font-size="30" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">厕所旁边</text>
+      <text x="144" y="1102" fill="#6A84A4" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif">味道只是表面，真正烦的是排队和开关门。</text>
+    </g>
+    <g>
+      <circle cx="530" cy="956" r="18" fill="#F05C4D"/>
+      <path d="M522 948L538 964" stroke="white" stroke-width="6" stroke-linecap="round"/>
+      <path d="M538 948L522 964" stroke="white" stroke-width="6" stroke-linecap="round"/>
+      <text x="564" y="964" fill="#173A72" font-size="30" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">机翼后方靠窗</text>
+      <text x="564" y="1006" fill="#6A84A4" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif">如果你想看风景、拍照，这类位置常常很失望。</text>
+    </g>
+    <rect x="530" y="1034" width="394" height="58" rx="18" fill="#F3F8FD"/>
+    <text x="560" y="1062" fill="#214F90" font-size="19" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">避坑口诀：先躲最后一排、厕所旁，</text>
+    <text x="560" y="1088" fill="#214F90" font-size="19" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">再避开机翼后方靠窗位。</text>
+  </g>
+
+  <g>
+    <rect x="1008" y="826" width="526" height="300" rx="28" fill="#FFFFFF" stroke="#D8E6F4" stroke-width="2"/>
+      <rect x="1014" y="846" width="320" height="54" rx="18" fill="#1E57A3"/>
+      <text x="1044" y="881" fill="white" font-size="26" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">三、靠窗 vs 靠过道</text>
+      <text x="1046" y="948" fill="#173A72" font-size="26" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">靠窗：更适合体验感</text>
+      <text x="1046" y="982" fill="#6A84A4" font-size="19" font-family="PingFang SC, Microsoft YaHei, sans-serif">看风景、拍照、第一次坐飞机、容易晕机</text>
+      <text x="1046" y="1038" fill="#173A72" font-size="26" font-family="Source Han Serif SC, Noto Serif SC, serif" font-weight="700">靠过道：更适合行动自由</text>
+      <text x="1046" y="1072" fill="#6A84A4" font-size="19" font-family="PingFang SC, Microsoft YaHei, sans-serif">长途飞行、频繁起身、想随时活动</text>
+    <rect x="1042" y="1100" width="458" height="20" rx="10" fill="#EDF5FD"/>
+    <text x="1271" y="1118" text-anchor="middle" fill="#173A72" font-size="22" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">中间位通常最不值得主动选。</text>
+  </g>
+</svg>
